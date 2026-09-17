@@ -1,0 +1,3432 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyên Dương · Học 5 Ngoại Ngữ A→Z – Trung · Hàn · Đức · Pháp · Ý</title>
+    <meta name="description" content="Website học 5 ngoại ngữ miễn phí bởi Nguyên Dương: Trung, Hàn, Đức, Pháp, Ý. Bài học A→Z, flashcard, trắc nghiệm, từ điển, mini-game. Hotline: 0389 773 782.">
+    <meta name="author" content="Nguyên Dương">
+    <meta name="theme-color" content="#7c3aed">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="data:application/json,{%22name%22:%22H%E1%BB%8Dc%205%20Ngo%E1%BA%A1i%20Ng%E1%BB%AF%20-%20Nguy%C3%AAn%20D%C6%B0%C6%A1ng%22,%22short_name%22:%22Ngo%E1%BA%A1i%20Ng%E1%BB%AF%22,%22start_url%22:%22.%22,%22display%22:%22standalone%22,%22background_color%22:%22%23faf5ff%22,%22theme_color%22:%22%237c3aed%22,%22icons%22:[{%22src%22:%22data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='42' fill='%237c3aed'/%3E%3Ctext x='96' y='130' font-size='100' text-anchor='middle' fill='white' font-family='serif' font-weight='900'%3END%3C/text%3E%3C/svg%3E%22,%22sizes%22:%22192x192%22,%22type%22:%22image/svg+xml%22}]}">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%237c3aed'/%3E%3Ctext x='90' y='122' font-size='95' text-anchor='middle' fill='white' font-family='serif' font-weight='900'%3END%3C/text%3E%3C/svg%3E">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #7c3aed;
+            --primary-dark: #5b21b6;
+            --secondary: #ec4899;
+            --accent: #f59e0b;
+            --accent-light: #fbbf24;
+            --ink: #1a1a2e;
+            --gray: #64748b;
+            --light: #faf5ff;
+            --border: #ede9fe;
+            --card: #ffffff;
+            --green: #10b981;
+            --blue: #3b82f6;
+            --red: #ef4444;
+            --zalo: #0099ff;
+        }
+        /* ===== DARK MODE (Feature 6) ===== */
+        body.dark-mode {
+            --ink: #f1f5f9;
+            --gray: #94a3b8;
+            --light: #0f0f1e;
+            --border: #2d2d44;
+            --card: #1a1a2e;
+            background: #0a0a15;
+        }
+        body.dark-mode header { background: rgba(15,15,30,0.9); }
+        body.dark-mode .lang-switcher { background: #1a1a2e; }
+        body.dark-mode .lesson-card,
+        body.dark-mode .feature-card,
+        body.dark-mode .sidebar-box,
+        body.dark-mode .quiz-box,
+        body.dark-mode .flashcard-front,
+        body.dark-mode .dict-item,
+        body.dark-mode .blog-card,
+        body.dark-mode .author-box,
+        body.dark-mode .contact-box,
+        body.dark-mode .progress-card,
+        body.dark-mode .achievement-card,
+        body.dark-mode .game-box,
+        body.dark-mode .comment-box,
+        body.dark-mode .comment-item { background: var(--card); }
+
+        /* Theme ngôn ngữ */
+        body.theme-kr {
+            --primary: #ec4899; --primary-dark: #be185d;
+            --secondary: #3b82f6; --accent: #06b6d4;
+            --accent-light: #22d3ee; --light: #fdf2f8; --border: #fce7f3;
+        }
+        body.theme-kr.dark-mode { --light: #1a0f1a; --border: #4a1a3a; }
+        body.theme-de {
+            --primary: #1f2937; --primary-dark: #111827;
+            --secondary: #dc2626; --accent: #f59e0b;
+            --accent-light: #fbbf24; --light: #f9fafb; --border: #e5e7eb;
+        }
+        body.theme-de.dark-mode { --light: #0f0f0f; --border: #2a2a2a; }
+        body.theme-fr {
+            --primary: #2563eb; --primary-dark: #1e40af;
+            --secondary: #dc2626; --accent: #fbbf24;
+            --accent-light: #fcd34d; --light: #eff6ff; --border: #dbeafe;
+        }
+        body.theme-fr.dark-mode { --light: #0f1a2e; --border: #1e3a5f; }
+        body.theme-it {
+            --primary: #16a34a; --primary-dark: #15803d;
+            --secondary: #dc2626; --accent: #fbbf24;
+            --accent-light: #fcd34d; --light: #f0fdf4; --border: #dcfce7;
+        }
+        body.theme-it.dark-mode { --light: #0f1a10; --border: #1a3a1e; }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: var(--light);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background 0.4s, color 0.4s;
+        }
+        .hanzi { font-family: 'Noto Sans SC', sans-serif; }
+        .hangul { font-family: 'Noto Sans KR', sans-serif; }
+        .latin { font-family: 'Be Vietnam Pro', sans-serif; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* ===== HEADER ===== */
+        header {
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(124, 58, 237, 0.06);
+            transition: background 0.4s;
+        }
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        .logo-icon {
+            width: 46px; height: 46px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 800;
+            box-shadow: 0 8px 20px -6px rgba(124, 58, 237, 0.5);
+        }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-text .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 1.1rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .logo-text .brand-sub {
+            font-size: 0.7rem;
+            color: var(--gray);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .lang-switcher {
+            display: flex;
+            gap: 0.25rem;
+            background: var(--light);
+            padding: 0.3rem;
+            border-radius: 60px;
+            border: 1px solid var(--border);
+            flex-wrap: wrap;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 60px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--gray);
+        }
+        .lang-btn.active {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+        }
+        .lang-btn .flag { font-size: 1.05rem; }
+        .nav-links {
+            display: flex;
+            gap: 0.2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 0.5rem 0.9rem;
+            border-radius: 30px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(236, 72, 153, 0.1));
+            color: var(--primary);
+            font-weight: 600;
+        }
+        .nav-actions {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .icon-btn {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            background: var(--light);
+            border: 1px solid var(--border);
+            color: var(--ink);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        .icon-btn:hover {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            transform: scale(1.1);
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            color: var(--ink);
+            cursor: pointer;
+        }
+
+        /* ===== AD SLOTS ===== */
+        .ad-slot {
+            background: repeating-linear-gradient(45deg, #f8f8fc, #f8f8fc 10px, var(--border) 10px, var(--border) 20px);
+            border: 2px dashed #c4b5fd;
+            border-radius: 12px;
+            text-align: center;
+            color: #a78bfa;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 6px;
+            padding: 1rem;
+            position: relative;
+        }
+        .ad-slot::before {
+            content: 'QUẢNG CÁO';
+            position: absolute;
+            top: 6px;
+            left: 10px;
+            font-size: 0.6rem;
+            background: #c4b5fd;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 20px;
+        }
+        .ad-header { max-width: 728px; height: 90px; margin: 1rem auto; }
+        .ad-inline { width: 100%; height: 120px; margin: 2rem 0; }
+        .ad-footer { width: 100%; height: 90px; margin: 2rem auto; max-width: 728px; }
+
+        /* ===== VIEW ===== */
+        .view { display: none; animation: fadeIn 0.5s ease; }
+        .view.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--light) 0%, var(--border) 50%, #fef3c7 100%);
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: attr(data-bg1);
+            position: absolute;
+            top: 30px; right: 4%;
+            font-size: 15rem;
+            font-weight: 900;
+            color: rgba(124, 58, 237, 0.05);
+            line-height: 1;
+            pointer-events: none;
+        }
+        .hero::after {
+            content: attr(data-bg2);
+            position: absolute;
+            bottom: -40px; left: 2%;
+            font-size: 11rem;
+            font-weight: 900;
+            color: rgba(236, 72, 153, 0.06);
+            line-height: 1;
+            pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--card);
+            color: var(--primary);
+            padding: 0.6rem 1.3rem;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 20px -8px rgba(124, 58, 237, 0.3);
+            border: 1px solid var(--border);
+        }
+        .hero-badge i { color: var(--accent); }
+        .hero h1 {
+            font-size: clamp(2.2rem, 5.5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+            font-family: 'Playfair Display', serif;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--gray);
+            max-width: 640px;
+            margin: 0 auto 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            border: none;
+            padding: 1rem 2.2rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 12px 30px -8px rgba(124, 58, 237, 0.5);
+            font-family: inherit;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px -8px rgba(124, 58, 237, 0.7);
+        }
+        .btn-outline {
+            background: var(--card);
+            color: var(--ink);
+            border: 2px solid var(--border);
+            padding: 1rem 2.2rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: inherit;
+        }
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        .hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            justify-content: center;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        .stat-item { text-align: center; }
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-label { font-size: 0.85rem; color: var(--gray); margin-top: 6px; font-weight: 500; }
+
+        .lang-banner {
+            background: linear-gradient(135deg, var(--card), var(--light));
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+        .lang-flag-big { font-size: 3.5rem; line-height: 1; }
+        .lang-info { flex: 1; min-width: 250px; text-align: left; }
+        .lang-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 0.3rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .lang-info p { color: var(--gray); font-size: 0.95rem; }
+
+        .section { padding: 3rem 0; }
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Playfair Display', serif;
+        }
+        .section-title i { color: var(--primary); }
+        .section-sub { color: var(--gray); margin-bottom: 2rem; font-size: 1rem; max-width: 700px; }
+        .section-center { text-align: center; }
+        .section-center .section-title { justify-content: center; }
+        .section-center .section-sub { margin-left: auto; margin-right: auto; }
+
+        .lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.2rem;
+        }
+        .lesson-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 1.2rem;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -12px rgba(124, 58, 237, 0.2);
+            border-color: var(--primary);
+        }
+        .lesson-card.completed::before {
+            content: '✓';
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 28px; height: 28px;
+            background: var(--green);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.9rem;
+            box-shadow: 0 6px 15px -4px rgba(16, 185, 129, 0.5);
+        }
+        .lesson-num {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: rgba(124, 58, 237, 0.08);
+            line-height: 1;
+        }
+        .lesson-level {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            background: rgba(245, 158, 11, 0.15);
+            color: #b45309;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+        }
+        .lesson-level.beginner { background: rgba(16, 185, 129, 0.15); color: #047857; }
+        .lesson-level.intermediate { background: rgba(59, 130, 246, 0.15); color: #1d4ed8; }
+        .lesson-level.advanced { background: rgba(236, 72, 153, 0.15); color: #be185d; }
+        .lesson-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; padding-right: 2rem; }
+        .lesson-card .target-lang { font-size: 0.95rem; color: var(--primary); font-weight: 500; margin-bottom: 0.8rem; }
+        .lesson-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--border);
+        }
+        .lesson-meta span { display: flex; align-items: center; gap: 5px; }
+        .lesson-meta i { color: var(--primary); }
+
+        /* ===== PROGRESS CARD (Feature 2) ===== */
+        .progress-card {
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .progress-info { flex: 1; min-width: 250px; }
+        .progress-info h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .progress-info h3 i { color: var(--primary); }
+        .progress-bar-wrap {
+            height: 12px;
+            background: var(--border);
+            border-radius: 60px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 60px;
+            transition: width 0.8s;
+            width: 0%;
+        }
+        .progress-text {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .streak-box {
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 60px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px -6px rgba(245, 158, 11, 0.5);
+        }
+        .streak-box i { font-size: 1.3rem; }
+
+        /* ===== ACHIEVEMENTS (Feature 7) ===== */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .achievement-card {
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.2rem 1rem;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .achievement-card.unlocked {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(236, 72, 153, 0.1));
+        }
+        .achievement-card.unlocked .ach-icon {
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            box-shadow: 0 8px 20px -6px rgba(245, 158, 11, 0.5);
+        }
+        .achievement-card.locked { opacity: 0.5; }
+        .ach-icon {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #fff;
+            margin: 0 auto 0.7rem;
+            transition: all 0.3s;
+        }
+        .achievement-card .ach-name { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.2rem; }
+        .achievement-card .ach-desc { font-size: 0.7rem; color: var(--gray); }
+
+        /* ===== FLASHCARD ===== */
+        .flashcard-container {
+            perspective: 1200px;
+            max-width: 500px;
+            margin: 2rem auto;
+            height: 340px;
+        }
+        .flashcard {
+            width: 100%; height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+        .flashcard.flipped { transform: rotateY(180deg); }
+        .flashcard-face {
+            position: absolute;
+            width: 100%; height: 100%;
+            backface-visibility: hidden;
+            border-radius: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            box-shadow: 0 20px 50px -12px rgba(124, 58, 237, 0.2);
+        }
+        .flashcard-front {
+            background: var(--card);
+            border: 2px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        .flashcard-front::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+        }
+        .flashcard-back {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            transform: rotateY(180deg);
+        }
+        .flashcard-front .fc-target {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .flashcard-front .fc-hint { color: var(--gray); font-size: 0.9rem; }
+        .flashcard-back .fc-pinyin { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.8rem; }
+        .flashcard-back .fc-meaning { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .flashcard-back .fc-example { font-size: 1rem; opacity: 0.9; margin-top: 1rem; }
+        .fc-controls {
+            display: flex;
+            gap: 0.7rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .fc-btn {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 0.8rem 1.5rem;
+            border-radius: 60px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+            color: var(--ink);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .fc-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .fc-btn.primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            border: none;
+        }
+        .fc-btn.know {
+            background: linear-gradient(135deg, var(--green), #059669);
+            color: #fff;
+            border: none;
+        }
+        .fc-btn.dont-know {
+            background: linear-gradient(135deg, var(--red), #dc2626);
+            color: #fff;
+            border: none;
+        }
+        .fc-stats {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .fc-stats strong { color: var(--primary); }
+
+        /* ===== QUIZ ===== */
+        .quiz-box {
+            max-width: 700px;
+            margin: 2rem auto;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .quiz-box::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+        }
+        .quiz-question {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .quiz-question .q-target {
+            font-size: 3rem;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-options { display: grid; gap: 0.8rem; margin-bottom: 1.5rem; }
+        .quiz-option {
+            background: var(--light);
+            border: 2px solid var(--border);
+            padding: 1rem 1.3rem;
+            border-radius: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: left;
+            color: var(--ink);
+        }
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: rgba(124, 58, 237, 0.04);
+        }
+        .quiz-option.correct {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: var(--green);
+            color: var(--green);
+            font-weight: 700;
+        }
+        .quiz-option.wrong {
+            background: rgba(236, 72, 153, 0.1);
+            border-color: var(--secondary);
+            color: var(--secondary);
+            font-weight: 700;
+        }
+        .quiz-progress {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+        .quiz-result { text-align: center; padding: 2rem; }
+        .quiz-result .result-score {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* ===== LISTENING (Feature 5) ===== */
+        .listening-box {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+        }
+        .listening-box::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 1.5rem 1.5rem 0 0;
+        }
+        .listen-audio-btn {
+            width: 120px; height: 120px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 3rem;
+            cursor: pointer;
+            margin: 1rem auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 40px -8px rgba(124, 58, 237, 0.5);
+            transition: all 0.3s;
+            animation: pulseAudio 2s infinite;
+        }
+        .listen-audio-btn:hover {
+            transform: scale(1.08);
+        }
+        @keyframes pulseAudio {
+            0%, 100% { box-shadow: 0 15px 40px -8px rgba(124, 58, 237, 0.5); }
+            50% { box-shadow: 0 15px 50px -8px rgba(124, 58, 237, 0.9); }
+        }
+        .listen-input {
+            width: 100%;
+            padding: 1rem 1.3rem;
+            border: 2px solid var(--border);
+            border-radius: 60px;
+            font-size: 1.3rem;
+            text-align: center;
+            outline: none;
+            font-family: inherit;
+            background: var(--light);
+            color: var(--ink);
+            transition: all 0.2s;
+            margin-bottom: 1rem;
+        }
+        .listen-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+        }
+        .listen-input.correct { border-color: var(--green); background: rgba(16,185,129,0.05); }
+        .listen-input.wrong { border-color: var(--red); background: rgba(239,68,68,0.05); }
+        .listen-feedback {
+            padding: 1rem;
+            border-radius: 1rem;
+            margin-top: 1rem;
+            font-weight: 600;
+            display: none;
+        }
+        .listen-feedback.show { display: block; }
+        .listen-feedback.correct {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--green);
+        }
+        .listen-feedback.wrong {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--red);
+        }
+        .listen-hint {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        /* ===== DICTIONARY ===== */
+        .dict-search {
+            max-width: 600px;
+            margin: 2rem auto;
+            display: flex;
+            gap: 0.8rem;
+        }
+        .dict-search input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--border);
+            border-radius: 60px;
+            font-size: 1rem;
+            outline: none;
+            font-family: inherit;
+            background: var(--card);
+            color: var(--ink);
+            transition: all 0.2s;
+        }
+        .dict-search input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+        }
+        .dict-results { max-width: 800px; margin: 0 auto; }
+        .dict-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.3rem 1.5rem;
+            margin-bottom: 0.8rem;
+            transition: all 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .dict-item:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 20px -8px rgba(124, 58, 237, 0.15);
+        }
+        .dict-item .di-target { font-size: 1.6rem; color: var(--primary); font-weight: 700; }
+        .dict-item .di-pinyin { color: var(--blue); font-weight: 600; font-size: 1rem; }
+        .dict-item .di-meaning { color: var(--ink); font-weight: 500; flex: 1; }
+        .audio-btn {
+            background: rgba(124, 58, 237, 0.1);
+            border: none;
+            color: var(--primary);
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .audio-btn:hover {
+            background: var(--primary);
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* ===== MATCHING GAME (Feature 9) ===== */
+        .game-box {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            position: relative;
+        }
+        .game-box::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            border-radius: 1.5rem 1.5rem 0 0;
+        }
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .game-stats {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        .game-stats strong { color: var(--primary); font-weight: 800; }
+        .matching-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .match-col { display: flex; flex-direction: column; gap: 0.7rem; }
+        .match-item {
+            background: var(--light);
+            border: 2px solid var(--border);
+            border-radius: 0.8rem;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 600;
+            text-align: center;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .match-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .match-item.selected {
+            background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(236,72,153,0.15));
+            border-color: var(--primary);
+        }
+        .match-item.matched {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: var(--green);
+            color: var(--green);
+            cursor: default;
+            opacity: 0.7;
+        }
+        .match-item.wrong-shake {
+            animation: shake 0.5s;
+            border-color: var(--red);
+            background: rgba(239, 68, 68, 0.1);
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+
+        /* ===== BLOG ===== */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .blog-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 1.2rem;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -12px rgba(124, 58, 237, 0.2);
+        }
+        .blog-thumb {
+            height: 160px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: rgba(255,255,255,0.6);
+            font-weight: 900;
+        }
+        .blog-body { padding: 1.3rem; }
+        .blog-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--primary);
+            background: rgba(124, 58, 237, 0.1);
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 0.7rem;
+            text-transform: uppercase;
+        }
+        .blog-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.4; }
+        .blog-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.5; }
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 0.8rem;
+            padding-top: 0.8rem;
+            border-top: 1px dashed var(--border);
+        }
+
+        /* ===== COMMUNITY (Feature 10) ===== */
+        .community-box {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+        }
+        .comment-form {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .comment-form input,
+        .comment-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 1rem;
+            font-family: inherit;
+            font-size: 0.95rem;
+            background: var(--light);
+            color: var(--ink);
+            outline: none;
+            transition: all 0.2s;
+        }
+        .comment-form input:focus,
+        .comment-form textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+        }
+        .comment-form input { flex: 1; min-width: 200px; }
+        .comment-form textarea {
+            min-height: 100px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .comment-btn {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            border: none;
+            padding: 0.9rem 2rem;
+            border-radius: 60px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            align-self: flex-end;
+            transition: all 0.2s;
+        }
+        .comment-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -6px rgba(124, 58, 237, 0.5);
+        }
+        .comment-item {
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .comment-avatar {
+            width: 42px; height: 42px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+        .comment-content { flex: 1; }
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .comment-name { font-weight: 700; font-size: 0.95rem; }
+        .comment-time { font-size: 0.75rem; color: var(--gray); }
+        .comment-text { font-size: 0.9rem; line-height: 1.6; }
+        .comment-actions {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+        .comment-like {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.2s;
+        }
+        .comment-like:hover, .comment-like.liked { color: var(--red); }
+
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            background: linear-gradient(135deg, var(--light), var(--border));
+            padding: 3rem 1.5rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .page-header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .page-header h1 span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .page-header p { color: var(--gray); max-width: 600px; margin: 0 auto; }
+
+        /* ===== AUTHOR BOX ===== */
+        .author-box {
+            background: linear-gradient(135deg, var(--card), var(--light));
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .author-box::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+        }
+        .author-avatar {
+            width: 100px; height: 100px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 15px 35px -8px rgba(124, 58, 237, 0.5);
+            position: relative;
+        }
+        .author-avatar::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border-radius: 50%;
+            border: 2px dashed var(--primary);
+            opacity: 0.3;
+            animation: spin 15s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .author-info { flex: 1; min-width: 280px; }
+        .author-info .author-name {
+            font-size: 1.8rem;
+            font-weight: 900;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        .author-info .author-role {
+            font-size: 0.95rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .author-info .author-desc {
+            font-size: 0.95rem;
+            color: var(--gray);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .author-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+        .author-tags span {
+            background: rgba(124, 58, 237, 0.1);
+            color: var(--primary);
+            padding: 0.3rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* ===== CONTACT BOX ===== */
+        .contact-box {
+            background: linear-gradient(135deg, var(--card), var(--border));
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .contact-box::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+        }
+        .contact-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .contact-box h2 span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .contact-box > p { color: var(--gray); margin-bottom: 2rem; }
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .contact-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 1.2rem;
+            padding: 1.5rem 2rem;
+            min-width: 250px;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--ink);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -12px rgba(124, 58, 237, 0.2);
+            border-color: var(--primary);
+        }
+        .contact-item .ci-icon {
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: #fff;
+        }
+        .contact-item .ci-icon.zalo { background: linear-gradient(135deg, #0099ff, #0066cc); }
+        .contact-item .ci-icon.mail { background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+        .contact-item .ci-label { font-size: 0.8rem; color: var(--gray); font-weight: 600; text-transform: uppercase; }
+        .contact-item .ci-value { font-size: 1.05rem; font-weight: 700; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(135deg, #1a1a2e, #2d1b4e);
+            color: #c4b5fd;
+            padding: 3rem 1.5rem 2rem;
+            margin-top: 4rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.2fr;
+            gap: 2rem;
+        }
+        @media (max-width: 900px) {
+            .footer-content { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 500px) {
+            .footer-content { grid-template-columns: 1fr; }
+        }
+        .footer-content h5 { color: #fff; font-size: 0.95rem; font-weight: 700; margin-bottom: 1rem; }
+        .footer-content ul { list-style: none; }
+        .footer-content ul li { margin-bottom: 0.6rem; font-size: 0.88rem; }
+        .footer-content ul a {
+            color: #c4b5fd;
+            text-decoration: none;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+        .footer-content ul a:hover { color: var(--accent-light); }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        .footer-logo .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-light), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .footer-desc { font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.5rem; }
+        .social-links { display: flex; gap: 0.8rem; }
+        .social-links a {
+            width: 40px; height: 40px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .social-links a:hover {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transform: translateY(-3px);
+        }
+        .footer-contact-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+        .footer-contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+        .footer-contact-list li i {
+            width: 32px; height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.08);
+            color: var(--accent-light);
+            flex-shrink: 0;
+        }
+        .footer-contact-list li a {
+            color: #e9d5ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer-contact-list li .zalo-cta {
+            background: linear-gradient(135deg, #0099ff, #0066cc);
+            color: #fff !important;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ===== FLOATING ZALO ===== */
+        .float-zalo {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 64px; height: 64px;
+            background: linear-gradient(135deg, #0099ff, #0066cc);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.7rem;
+            box-shadow: 0 10px 30px -5px rgba(0, 153, 255, 0.6);
+            cursor: pointer;
+            z-index: 999;
+            transition: transform 0.3s;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+        .float-zalo:hover { transform: scale(1.1); }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 10px 30px -5px rgba(0, 153, 255, 0.6); }
+            50% { box-shadow: 0 10px 40px -5px rgba(0, 153, 255, 1); }
+        }
+
+        /* ===== TOAST ===== */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 15px 40px -10px rgba(124, 58, 237, 0.8);
+            z-index: 9999;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            pointer-events: none;
+        }
+        .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+        /* ===== PWA INSTALL BANNER ===== */
+        .pwa-banner {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--card);
+            border: 2px solid var(--primary);
+            border-radius: 1.2rem;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 20px 50px -10px rgba(124, 58, 237, 0.4);
+            display: none;
+            align-items: center;
+            gap: 1rem;
+            z-index: 9998;
+            max-width: 90%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .pwa-banner.show { display: flex; }
+        .pwa-banner-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .pwa-btn {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 60px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+        .pwa-close {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 1100px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .nav-links.mobile-open {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--card);
+                flex-direction: column;
+                padding: 1rem;
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.15);
+            }
+        }
+        @media (max-width: 700px) {
+            .flashcard-container { height: 280px; }
+            .flashcard-front .fc-target { font-size: 3rem; }
+            .author-box { padding: 1.5rem; }
+            .contact-item { min-width: 100%; }
+            .lang-btn span:not(.flag) { display: none; }
+            .lang-btn { padding: 0.5rem 0.7rem; }
+            .matching-grid { grid-template-columns: 1fr; }
+            .progress-card { flex-direction: column; align-items: stretch; }
+        }
+    </style>
+</head>
+<body class="theme-cn">
+
+<!-- HEADER -->
+<header>
+    <div class="nav">
+        <a class="logo" onclick="showView('home')">
+            <div class="logo-icon" id="logoIcon">汉</div>
+            <div class="logo-text">
+                <span class="brand-name">Nguyên Dương</span>
+                <span class="brand-sub" id="logoSub">5 Ngoại Ngữ A→Z</span>
+            </div>
+        </a>
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="cn" onclick="switchLanguage('cn')" title="Tiếng Trung">
+                <span class="flag">🇨🇳</span><span>Trung</span>
+            </button>
+            <button class="lang-btn" data-lang="kr" onclick="switchLanguage('kr')" title="Tiếng Hàn">
+                <span class="flag">🇰🇷</span><span>Hàn</span>
+            </button>
+            <button class="lang-btn" data-lang="de" onclick="switchLanguage('de')" title="Tiếng Đức">
+                <span class="flag">🇩🇪</span><span>Đức</span>
+            </button>
+            <button class="lang-btn" data-lang="fr" onclick="switchLanguage('fr')" title="Tiếng Pháp">
+                <span class="flag">🇫🇷</span><span>Pháp</span>
+            </button>
+            <button class="lang-btn" data-lang="it" onclick="switchLanguage('it')" title="Tiếng Ý">
+                <span class="flag">🇮🇹</span><span>Ý</span>
+            </button>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a onclick="showView('home')" data-view="home" class="active">Trang chủ</a></li>
+            <li><a onclick="showView('lessons')" data-view="lessons">Bài học</a></li>
+            <li><a onclick="showView('flashcard')" data-view="flashcard">Flashcard</a></li>
+            <li><a onclick="showView('quiz')" data-view="quiz">Trắc nghiệm</a></li>
+            <li><a onclick="showView('listening')" data-view="listening">Luyện nghe</a></li>
+            <li><a onclick="showView('game')" data-view="game">Mini-game</a></li>
+            <li><a onclick="showView('dictionary')" data-view="dictionary">Từ điển</a></li>
+            <li><a onclick="showView('blog')" data-view="blog">Blog</a></li>
+            <li><a onclick="showView('progress')" data-view="progress">Tiến độ</a></li>
+            <li><a onclick="showView('community')" data-view="community">Cộng đồng</a></li>
+            <li><a onclick="showView('about')" data-view="about">Về tôi</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="icon-btn" id="darkModeBtn" onclick="toggleDarkMode()" title="Chế độ tối">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ===== VIEW: HOME ===== -->
+<div id="view-home" class="view active">
+    <div class="container">
+        <div class="ad-slot ad-header">
+            <i class="fa-solid fa-rectangle-ad" style="font-size:1.5rem;"></i>
+            <span>Quảng cáo Header (728x90)</span>
+        </div>
+    </div>
+
+    <section class="hero" id="heroSection" data-bg1="中文" data-bg2="汉语">
+        <div class="hero-badge">
+            <i class="fa-solid fa-fire"></i>
+            <span id="heroBadgeText">30 bài học · Miễn phí 100% · 5 ngôn ngữ</span>
+        </div>
+        <h1 id="heroTitle">Học tiếng <span>Trung</span><br>từ A đến Z giao tiếp đơn giản</h1>
+        <p id="heroDesc">Phương pháp học hiện đại: Pinyin chuẩn, chữ Hán có phát âm, bài tập tương tác, từ điển mini. Hoàn toàn miễn phí – không giới hạn.</p>
+        <div class="hero-cta">
+            <a onclick="showView('lessons')" class="btn-primary">
+                <i class="fa-solid fa-play"></i>
+                <span>Bắt đầu học ngay</span>
+            </a>
+            <a onclick="showView('flashcard')" class="btn-outline">
+                <i class="fa-solid fa-clone"></i> Luyện Flashcard
+            </a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Ngôn ngữ</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">150</div>
+                <div class="stat-label">Bài học</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Từ vựng</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Miễn phí</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRESS CARD (Feature 2) -->
+    <div class="container">
+        <div class="progress-card">
+            <div class="progress-info">
+                <h3><i class="fa-solid fa-chart-line"></i> Tiến độ của bạn</h3>
+                <div class="progress-bar-wrap">
+                    <div class="progress-bar-fill" id="homeProgressBar"></div>
+                </div>
+                <div class="progress-text">
+                    <span id="homeProgressText">0/30 bài đã hoàn thành</span>
+                    <span id="homeProgressPercent">0%</span>
+                </div>
+            </div>
+            <div class="streak-box">
+                <i class="fa-solid fa-fire"></i>
+                <span id="streakCount">0</span> ngày liên tiếp
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="lang-banner">
+            <div class="lang-flag-big" id="langFlagBig">🇨🇳</div>
+            <div class="lang-info">
+                <h3 id="langName">Tiếng Trung Quốc</h3>
+                <p id="langDescription">Ngôn ngữ được sử dụng nhiều nhất thế giới với hơn 1,3 tỷ người nói. Học tiếng Trung mở ra cơ hội nghề nghiệp và du học tại Trung Quốc.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section">
+        <div class="section-center">
+            <h2 class="section-title"><i class="fa-solid fa-globe"></i> 5 Ngôn ngữ trên website</h2>
+            <p class="section-sub">Chọn ngôn ngữ bạn muốn học – nhấn vào để chuyển đổi ngay.</p>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem;">
+            <div onclick="switchLanguage('cn')" style="background:linear-gradient(135deg, #7c3aed, #ec4899); color:#fff; padding:1.5rem; border-radius:1.2rem; text-align:center; cursor:pointer; transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:2.5rem; margin-bottom:0.5rem;">🇨🇳</div>
+                <div style="font-weight:800; font-size:1.1rem; font-family:'Playfair Display',serif;">Tiếng Trung</div>
+                <div style="font-size:0.85rem; opacity:0.9; margin-top:0.3rem;">中文 · 30 bài học</div>
+            </div>
+            <div onclick="switchLanguage('kr')" style="background:linear-gradient(135deg, #ec4899, #3b82f6); color:#fff; padding:1.5rem; border-radius:1.2rem; text-align:center; cursor:pointer; transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:2.5rem; margin-bottom:0.5rem;">🇰🇷</div>
+                <div style="font-weight:800; font-size:1.1rem; font-family:'Playfair Display',serif;">Tiếng Hàn</div>
+                <div style="font-size:0.85rem; opacity:0.9; margin-top:0.3rem;">한국어 · 30 bài học</div>
+            </div>
+            <div onclick="switchLanguage('de')" style="background:linear-gradient(135deg, #1f2937, #dc2626); color:#fff; padding:1.5rem; border-radius:1.2rem; text-align:center; cursor:pointer; transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:2.5rem; margin-bottom:0.5rem;">🇩🇪</div>
+                <div style="font-weight:800; font-size:1.1rem; font-family:'Playfair Display',serif;">Tiếng Đức</div>
+                <div style="font-size:0.85rem; opacity:0.9; margin-top:0.3rem;">Deutsch · 30 bài học</div>
+            </div>
+            <div onclick="switchLanguage('fr')" style="background:linear-gradient(135deg, #2563eb, #dc2626); color:#fff; padding:1.5rem; border-radius:1.2rem; text-align:center; cursor:pointer; transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:2.5rem; margin-bottom:0.5rem;">🇫🇷</div>
+                <div style="font-weight:800; font-size:1.1rem; font-family:'Playfair Display',serif;">Tiếng Pháp</div>
+                <div style="font-size:0.85rem; opacity:0.9; margin-top:0.3rem;">Français · 30 bài học</div>
+            </div>
+            <div onclick="switchLanguage('it')" style="background:linear-gradient(135deg, #16a34a, #dc2626); color:#fff; padding:1.5rem; border-radius:1.2rem; text-align:center; cursor:pointer; transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:2.5rem; margin-bottom:0.5rem;">🇮🇹</div>
+                <div style="font-weight:800; font-size:1.1rem; font-family:'Playfair Display',serif;">Tiếng Ý</div>
+                <div style="font-size:0.85rem; opacity:0.9; margin-top:0.3rem;">Italiano · 30 bài học</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section">
+        <div class="section-center">
+            <h2 class="section-title"><i class="fa-solid fa-road"></i> Lộ trình học <span id="langLabel1">tiếng Trung</span> A→Z</h2>
+            <p class="section-sub" id="langLabel2">Học tuần tự 30 bài, kết thúc có thể giao tiếp đơn giản.</p>
+        </div>
+        <div class="lesson-grid" id="homeLessonGrid"></div>
+    </div>
+
+    <div class="container">
+        <div class="ad-slot ad-inline">
+            <i class="fa-solid fa-rectangle-ad" style="font-size:1.5rem;"></i>
+            <span>Quảng cáo Inline (Responsive)</span>
+        </div>
+    </div>
+
+    <!-- ACHIEVEMENTS (Feature 7) -->
+    <div class="container section">
+        <div class="section-center">
+            <h2 class="section-title"><i class="fa-solid fa-trophy"></i> Thành tích của bạn</h2>
+            <p class="section-sub">Hoàn thành các mục tiêu để mở khóa huy hiệu!</p>
+        </div>
+        <div class="achievements-grid" id="achievementsGrid"></div>
+    </div>
+
+    <div class="container">
+        <div class="author-box">
+            <div class="author-avatar">ND</div>
+            <div class="author-info">
+                <div class="author-name">Nguyên Dương</div>
+                <div class="author-role">Người xây dựng website</div>
+                <div class="author-desc">Chào bạn! Mình là <strong>Nguyên Dương</strong> – người tạo ra website học ngoại ngữ miễn phí với <strong>5 ngôn ngữ: Trung · Hàn · Đức · Pháp · Ý</strong>. Mình là người đam mê ngoại ngữ và mong muốn chia sẻ kiến thức, tài nguyên học tập đến cộng đồng người Việt.</div>
+                <div class="author-tags">
+                    <span>🌏 Đam mê ngoại ngữ</span>
+                    <span>✍️ Người xây dựng nội dung</span>
+                    <span>💜 Chia sẻ miễn phí</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="contact-box">
+            <h2>Liên hệ với <span>Nguyên Dương</span></h2>
+            <p>Có câu hỏi hoặc cần hỗ trợ? Liên hệ ngay qua các kênh bên dưới!</p>
+            <div class="contact-methods">
+                <a href="https://zalo.me/0389773782" target="_blank" class="contact-item">
+                    <div class="ci-icon zalo"><i class="fa-solid fa-comment-dots"></i></div>
+                    <div class="ci-label">Zalo</div>
+                    <div class="ci-value">0389 773 782</div>
+                </a>
+                <a href="mailto:vanbachjuly123@gmail.com" class="contact-item">
+                    <div class="ci-icon mail"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="ci-label">Email</div>
+                    <div class="ci-value">vanbachjuly123@gmail.com</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== VIEW: LESSONS ===== -->
+<div id="view-lessons" class="view">
+    <div class="page-header">
+        <h1>Toàn bộ <span id="lessonsHeaderTitle">bài học</span></h1>
+        <p id="lessonsHeaderDesc">Học miễn phí 100% – không giới hạn, không cần VIP.</p>
+    </div>
+    <div class="container section">
+        <div class="lesson-grid" id="allLessonGrid"></div>
+    </div>
+</div>
+
+<!-- ===== VIEW: LESSON DETAIL ===== -->
+<div id="view-lesson-detail" class="view">
+    <div class="container section">
+        <button class="btn-outline" onclick="showView('lessons')" style="margin-bottom:1.5rem;">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại danh sách
+        </button>
+        <div id="lessonDetailContent"></div>
+    </div>
+</div>
+
+<!-- ===== VIEW: FLASHCARD (Feature 3) ===== -->
+<div id="view-flashcard" class="view">
+    <div class="page-header">
+        <h1>Luyện <span>Flashcard</span></h1>
+        <p>Ôn tập thông minh với Spaced Repetition – chỉ ôn từ chưa thuộc.</p>
+    </div>
+    <div class="container section">
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard" onclick="flipCard()">
+                <div class="flashcard-face flashcard-front">
+                    <div class="fc-target" id="fcTarget">你好</div>
+                    <div class="fc-hint">Nhấp để xem nghĩa</div>
+                </div>
+                <div class="flashcard-face flashcard-back">
+                    <div class="fc-pinyin" id="fcPinyin">nǐ hǎo</div>
+                    <div class="fc-meaning" id="fcMeaning">Xin chào</div>
+                    <div class="fc-example" id="fcExample">你好，我叫小明。</div>
+                </div>
+            </div>
+        </div>
+        <div class="fc-controls">
+            <button class="fc-btn" onclick="prevCard()">
+                <i class="fa-solid fa-arrow-left"></i> Trước
+            </button>
+            <button class="fc-btn primary" onclick="speakCurrent()">
+                <i class="fa-solid fa-volume-high"></i> Nghe
+            </button>
+            <button class="fc-btn" onclick="flipCard()">
+                <i class="fa-solid fa-rotate"></i> Lật
+            </button>
+            <button class="fc-btn" onclick="nextCard()">
+                Sau <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="fc-controls">
+            <button class="fc-btn dont-know" onclick="markCard(false)">
+                <i class="fa-solid fa-xmark"></i> Chưa thuộc
+            </button>
+            <button class="fc-btn know" onclick="markCard(true)">
+                <i class="fa-solid fa-check"></i> Đã thuộc
+            </button>
+        </div>
+        <div class="fc-stats">
+            <span>Thẻ: <strong id="fcCurrent">1</strong> / <strong id="fcTotal">20</strong></span>
+            <span>✅ Đã thuộc: <strong id="fcKnown">0</strong></span>
+            <span>❌ Chưa thuộc: <strong id="fcUnknown">0</strong></span>
+        </div>
+    </div>
+</div>
+
+<!-- ===== VIEW: QUIZ ===== -->
+<div id="view-quiz" class="view">
+    <div class="page-header">
+        <h1>Trắc nghiệm <span>từ vựng</span></h1>
+        <p>Kiểm tra kiến thức với 10 câu hỏi ngẫu nhiên.</p>
+    </div>
+    <div class="container section">
+        <div class="quiz-box" id="quizBox"></div>
+    </div>
+</div>
+
+<!-- ===== VIEW: LISTENING (Feature 5) ===== -->
+<div id="view-listening" class="view">
+    <div class="page-header">
+        <h1>Luyện nghe <span>chép chính tả</span></h1>
+        <p>Nghe audio và gõ lại từ bạn nghe được. Cách học hiệu quả nhất để nhớ từ!</p>
+    </div>
+    <div class="container section">
+        <div class="listening-box">
+            <div class="listen-hint" id="listenHint">Nhấp vào nút bên dưới để nghe từ</div>
+            <button class="listen-audio-btn" onclick="playListenAudio()">
+                <i class="fa-solid fa-volume-high"></i>
+            </button>
+            <input type="text" class="listen-input" id="listenInput" placeholder="Gõ từ bạn nghe được..." autocomplete="off">
+            <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                <button class="btn-primary" onclick="checkListenAnswer()">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Kiểm tra</span>
+                </button>
+                <button class="btn-outline" onclick="skipListen()">
+                    <i class="fa-solid fa-forward"></i> Bỏ qua
+                </button>
+            </div>
+            <div class="listen-feedback" id="listenFeedback"></div>
+            <div style="margin-top:1.5rem; font-size:0.9rem; color:var(--gray);">
+                Câu <strong id="listenCurrent">1</strong> / <strong id="listenTotal">20</strong> ·
+                Đúng: <strong id="listenCorrectCount" style="color:var(--green);">0</strong>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== VIEW: GAME (Feature 9) ===== -->
+<div id="view-game" class="view">
+    <div class="page-header">
+        <h1>Mini-game <span>nối từ</span></h1>
+        <p>Nối từ ở cột trái với nghĩa đúng ở cột phải. Nhanh tay và chính xác!</p>
+    </div>
+    <div class="container section">
+        <div class="game-box">
+            <div class="game-header">
+                <div class="game-stats">
+                    <span>⏱ Thời gian: <strong id="gameTime">0:00</strong></span>
+                    <span>✅ Đúng: <strong id="gameCorrect">0</strong></span>
+                    <span>❌ Sai: <strong id="gameWrong">0</strong></span>
+                </div>
+                <button class="btn-primary" onclick="startGame()" style="padding:0.7rem 1.5rem; font-size:0.9rem;">
+                    <i class="fa-solid fa-rotate"></i>
+                    <span>Chơi lại</span>
+                </button>
+            </div>
+            <div class="matching-grid">
+                <div class="match-col" id="matchLeft"></div>
+                <div class="match-col" id="matchRight"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== VIEW: DICTIONARY ===== -->
+<div id="view-dictionary" class="view">
+    <div class="page-header">
+        <h1>Từ điển <span>mini</span></h1>
+        <p>Tra cứu nhanh từ vựng. Tìm theo chữ viết, phiên âm hoặc nghĩa tiếng Việt.</p>
+    </div>
+    <div class="container section">
+        <div class="dict-search">
+            <input type="text" id="dictInput" placeholder="Nhập từ khóa cần tìm..." oninput="searchDict()">
+        </div>
+        <div class="dict-results" id="dictResults"></div>
+    </div>
+</div>
+
+<!-- ===== VIEW: BLOG (Feature 4) ===== -->
+<div id="view-blog" class="view">
+    <div class="page-header">
+        <h1>Blog <span>kiến thức</span></h1>
+        <p>Mẹo học ngoại ngữ, ngữ pháp, văn hóa và kinh nghiệm học tập hiệu quả.</p>
+    </div>
+    <div class="container section">
+        <div class="blog-grid" id="blogGrid"></div>
+    </div>
+</div>
+
+<!-- ===== VIEW: PROGRESS (Feature 2 + 7) ===== -->
+<div id="view-progress" class="view">
+    <div class="page-header">
+        <h1>Tiến độ <span>học tập</span></h1>
+        <p>Theo dõi quá trình học của bạn và các thành tích đã đạt được.</p>
+    </div>
+    <div class="container section">
+        <div class="progress-card">
+            <div class="progress-info">
+                <h3><i class="fa-solid fa-chart-line"></i> Tiến độ tổng quan</h3>
+                <div class="progress-bar-wrap">
+                    <div class="progress-bar-fill" id="progressPageBar"></div>
+                </div>
+                <div class="progress-text">
+                    <span id="progressPageText">0/30 bài đã hoàn thành</span>
+                    <span id="progressPagePercent">0%</span>
+                </div>
+            </div>
+            <div class="streak-box">
+                <i class="fa-solid fa-fire"></i>
+                <span id="streakCountPage">0</span> ngày liên tiếp
+            </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top:2rem;"><i class="fa-solid fa-trophy"></i> Huy hiệu đạt được</h2>
+        <div class="achievements-grid" id="achievementsGridPage"></div>
+
+        <h2 class="section-title" style="margin-top:2rem;"><i class="fa-solid fa-chart-pie"></i> Thống kê chi tiết</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-book"></i></div>
+                <h4 id="statLessonsDone">0 bài</h4>
+                <p>Bài học đã hoàn thành</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-clone"></i></div>
+                <h4 id="statFlashcards">0 từ</h4>
+                <p>Từ vựng đã thuộc (flashcard)</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h4 id="statQuiz">0%</h4>
+                <p>Điểm trắc nghiệm cao nhất</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-gamepad"></i></div>
+                <h4 id="statGame">0 điểm</h4>
+                <p>Điểm mini-game cao nhất</p>
+            </div>
+        </div>
+
+        <div style="text-align:center; margin-top:2rem;">
+            <button class="btn-outline" onclick="resetProgress()" style="color:var(--red); border-color:var(--red);">
+                <i class="fa-solid fa-trash"></i> Xóa toàn bộ tiến độ
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ===== VIEW: COMMUNITY (Feature 10) ===== -->
+<div id="view-community" class="view">
+    <div class="page-header">
+        <h1>Cộng đồng <span>học tập</span></h1>
+        <p>Chia sẻ cảm nhận, đặt câu hỏi và kết nối với những người học khác!</p>
+    </div>
+    <div class="container section">
+        <div class="community-box">
+            <h3 style="margin-bottom:1rem;"><i class="fa-solid fa-comment-dots" style="color:var(--primary);"></i> Viết bình luận của bạn</h3>
+            <div class="comment-form">
+                <input type="text" id="commentName" placeholder="Tên của bạn..." maxlength="40">
+                <textarea id="commentText" placeholder="Bạn nghĩ gì về website này? Hoặc đặt câu hỏi..." maxlength="500"></textarea>
+                <button class="comment-btn" onclick="postComment()">
+                    <i class="fa-solid fa-paper-plane"></i> Gửi bình luận
+                </button>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:1rem;">
+                <h3><i class="fa-solid fa-comments" style="color:var(--primary);"></i> Bình luận (<span id="commentCount">0</span>)</h3>
+            </div>
+            <div id="commentsList"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== VIEW: ABOUT ===== -->
+<div id="view-about" class="view">
+    <div class="page-header">
+        <h1>Về <span>Nguyên Dương</span></h1>
+        <p>Người tạo ra website học ngoại ngữ miễn phí cho người Việt.</p>
+    </div>
+    <div class="container section">
+        <div class="author-box" style="margin-top:0;">
+            <div class="author-avatar" style="width:140px; height:140px; font-size:3.5rem;">ND</div>
+            <div class="author-info">
+                <div class="author-name">Nguyên Dương</div>
+                <div class="author-role">Người xây dựng website · Đam mê ngoại ngữ</div>
+                <div class="author-desc" style="max-width:700px;">
+                    Xin chào! Mình là <strong>Nguyên Dương</strong> – người sáng lập website học ngoại ngữ miễn phí với 5 ngôn ngữ: <strong>Trung · Hàn · Đức · Pháp · Ý</strong>.<br><br>
+                    Mình là một người trẻ đam mê ngoại ngữ và yêu thích chia sẻ. Trong quá trình tự học, mình nhận ra người Việt gặp rất nhiều khó khăn khi tìm tài liệu học ngoại ngữ chất lượng, miễn phí. Vì vậy, mình quyết định tự tay xây dựng website này.<br><br>
+                    Mọi nội dung trên web đều do mình dành thời gian biên soạn và liên tục cập nhật. Mục tiêu của mình là tạo ra một <strong>cộng đồng học ngoại ngữ miễn phí, chất lượng</strong> cho tất cả người Việt.<br><br>
+                    Nếu bạn thấy website hữu ích, hãy chia sẻ cho bạn bè cùng học nhé! 💜
+                </div>
+                <div class="author-tags">
+                    <span>🌏 Đam mê ngoại ngữ</span>
+                    <span>✍️ Người xây dựng nội dung</span>
+                    <span>💜 Chia sẻ miễn phí</span>
+                    <span>🚀 Founder</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <h2>Liên hệ với <span>mình</span></h2>
+            <p>Có câu hỏi hoặc góp ý? Mình luôn sẵn sàng lắng nghe bạn!</p>
+            <div class="contact-methods">
+                <a href="https://zalo.me/0389773782" target="_blank" class="contact-item">
+                    <div class="ci-icon zalo"><i class="fa-solid fa-comment-dots"></i></div>
+                    <div class="ci-label">Zalo</div>
+                    <div class="ci-value">0389 773 782</div>
+                </a>
+                <a href="mailto:vanbachjuly123@gmail.com" class="contact-item">
+                    <div class="ci-icon mail"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="ci-label">Email</div>
+                    <div class="ci-value">vanbachjuly123@gmail.com</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AD FOOTER -->
+<div class="container">
+    <div class="ad-slot ad-footer">
+        <i class="fa-solid fa-rectangle-ad" style="font-size:1.5rem;"></i>
+        <span>Quảng cáo Footer (728x90)</span>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <div>
+            <div class="footer-logo">
+                <div class="logo-icon" id="footerLogoIcon" style="width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--secondary));">汉</div>
+                <span class="brand-name">Nguyên Dương</span>
+            </div>
+            <p class="footer-desc">Website học ngoại ngữ miễn phí bởi <strong style="color: var(--accent-light);">Nguyên Dương</strong>. Học tiếng <strong>Trung · Hàn · Đức · Pháp · Ý</strong> với lộ trình A→Z, phát âm chuẩn, bài tập tương tác – hoàn toàn miễn phí.</p>
+            <div class="social-links">
+                <a href="https://zalo.me/0389773782" target="_blank" title="Zalo 0389 773 782"><i class="fa-solid fa-comment"></i></a>
+                <a href="mailto:vanbachjuly123@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div>
+            <h5>Ngôn ngữ</h5>
+            <ul>
+                <li><a onclick="switchLanguage('cn')">🇨🇳 Tiếng Trung</a></li>
+                <li><a onclick="switchLanguage('kr')">🇰🇷 Tiếng Hàn</a></li>
+                <li><a onclick="switchLanguage('de')">🇩🇪 Tiếng Đức</a></li>
+                <li><a onclick="switchLanguage('fr')">🇫🇷 Tiếng Pháp</a></li>
+                <li><a onclick="switchLanguage('it')">🇮🇹 Tiếng Ý</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Học tập</h5>
+            <ul>
+                <li><a onclick="showView('lessons')">Bài học</a></li>
+                <li><a onclick="showView('flashcard')">Flashcard</a></li>
+                <li><a onclick="showView('listening')">Luyện nghe</a></li>
+                <li><a onclick="showView('game')">Mini-game</a></li>
+                <li><a onclick="showView('dictionary')">Từ điển</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Liên hệ Nguyên Dương</h5>
+            <ul class="footer-contact-list">
+                <li>
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <div>
+                        <div style="font-size:0.75rem; opacity:0.8; letter-spacing:1px; text-transform:uppercase; font-weight:700; margin-bottom:4px;">Zalo</div>
+                        <a href="https://zalo.me/0389773782" target="_blank" class="zalo-cta">
+                            <i class="fa-solid fa-comment"></i> 0389 773 782
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <div style="font-size:0.75rem; opacity:0.8; letter-spacing:1px; text-transform:uppercase; font-weight:700; margin-bottom:4px;">Email</div>
+                        <a href="mailto:vanbachjuly123@gmail.com" style="font-size:0.85rem; word-break:break-all;">vanbachjuly123@gmail.com</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 · Học ngoại ngữ miễn phí cho người Việt · Website xây dựng bởi Nguyên Dương</p>
+    </div>
+</footer>
+
+<!-- FLOATING ZALO -->
+<a href="https://zalo.me/0389773782" target="_blank" class="float-zalo" title="Chat Zalo 0389 773 782">
+    <i class="fa-solid fa-comment-dots"></i>
+</a>
+
+<!-- PWA INSTALL BANNER -->
+<div class="pwa-banner" id="pwaBanner">
+    <span class="pwa-banner-text">📱 Cài đặt website như app?</span>
+    <button class="pwa-btn" onclick="installPWA()">Cài đặt</button>
+    <button class="pwa-close" onclick="hidePWABanner()"><i class="fa-solid fa-xmark"></i></button>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMsg">Đã chuyển ngôn ngữ!</span>
+</div>
+
+<script>
+// ============================================================
+// ============ DATA 5 NGÔN NGỮ (Feature 8: Mở rộng) ==========
+// ============================================================
+const LANGUAGES = {
+    cn: {
+        code: 'cn', flag: '🇨🇳', name: 'Tiếng Trung Quốc', logoIcon: '汉',
+        heroBg1: '中文', heroBg2: '汉语',
+        heroTitle: 'Học tiếng <span>Trung</span><br>từ A đến Z giao tiếp đơn giản',
+        heroDesc: 'Phương pháp học hiện đại: Pinyin chuẩn, chữ Hán có phát âm, bài tập tương tác, từ điển mini. Hoàn toàn miễn phí – không giới hạn.',
+        heroBadgeText: '30 bài học · Miễn phí 100% · 5 ngôn ngữ',
+        langLabel1: 'tiếng Trung',
+        langLabel2: 'Học tuần tự 30 bài, kết thúc có thể giao tiếp đơn giản với người Trung Quốc.',
+        langDescription: 'Ngôn ngữ được sử dụng nhiều nhất thế giới với hơn 1,3 tỷ người nói. Học tiếng Trung mở ra cơ hội nghề nghiệp và du học tại Trung Quốc.',
+        lessonsHeaderTitle: '30 bài tiếng Trung',
+        speakLang: 'zh-CN', fontClass: 'hanzi', theme: 'theme-cn',
+        lessons: [
+            { id: 1, title: 'Chào hỏi cơ bản', target: '你好 · 您好 · 大家好', level: 'beginner', levelText: 'Nhập môn', time: 15, words: 12 },
+            { id: 2, title: 'Pinyin & 4 thanh điệu', target: 'ā á ǎ à', level: 'beginner', levelText: 'Nhập môn', time: 20, words: 0 },
+            { id: 3, title: 'Số đếm 1-100', target: '一二三四五六七八九十', level: 'beginner', levelText: 'Nhập môn', time: 15, words: 20 },
+            { id: 4, title: 'Giới thiệu bản thân', target: '我叫... · 我是越南人', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 15 },
+            { id: 5, title: 'Gia đình', target: '爸爸 · 妈妈 · 哥哥 · 姐姐', level: 'beginner', levelText: 'Cơ bản', time: 18, words: 14 },
+            { id: 6, title: 'Thời gian & ngày tháng', target: '今天 · 明天 · 现在几点', level: 'beginner', levelText: 'Cơ bản', time: 22, words: 18 },
+            { id: 7, title: 'Mua sắm & giá cả', target: '多少钱 · 太贵了 · 便宜一点', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 16 },
+            { id: 8, title: 'Gọi món ăn', target: '我饿了 · 我要一碗米饭', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 15 },
+            { id: 9, title: 'Chỉ đường', target: '一直走 · 左转 · 右转', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 10, title: 'Sở thích cá nhân', target: '我喜欢... · 我最爱...', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 17 },
+            { id: 11, title: 'Du lịch Trung Quốc', target: '买票 · 机场 · 酒店', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 22 },
+            { id: 12, title: 'Công việc & nghề nghiệp', target: '我做... · 公司在...', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 13, title: 'Cảm xúc & tâm trạng', target: '高兴 · 难过 · 生气', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 14, title: 'Sức khỏe & bệnh viện', target: '头疼 · 感冒 · 看医生', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 15, title: 'Thời tiết & mùa', target: '今天天气很好', level: 'intermediate', levelText: 'Trung cấp', time: 20, words: 16 },
+            { id: 16, title: 'Ngân hàng & tiền tệ', target: '取钱 · 换钱 · 汇率', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 17, title: 'Điện thoại & internet', target: '打电话 · 上网 · 微信', level: 'intermediate', levelText: 'Trung cấp', time: 20, words: 15 },
+            { id: 18, title: 'Giao thông', target: '公共汽车 · 地铁 · 出租车', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 19, title: 'Nhà ở & thuê nhà', target: '房子 · 租金 · 房东', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 17 },
+            { id: 20, title: 'Học tập & trường học', target: '大学 · 专业 · 考试', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 21, title: 'Kế hoạch tương lai', target: '打算 · 计划 · 以后', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 20 },
+            { id: 22, title: 'Kể chuyện quá khứ', target: '以前 · 已经 · 曾经', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 23, title: 'So sánh & lựa chọn', target: '比 · 不如 · 还是', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 16 },
+            { id: 24, title: 'Đưa ra lời khuyên', target: '应该 · 最好 · 必须', level: 'advanced', levelText: 'Nâng cao', time: 22, words: 15 },
+            { id: 25, title: 'Văn hóa Trung Quốc', target: '春节 · 中秋节 · 端午节', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 22 },
+            { id: 26, title: 'Tin tức & thời sự', target: '新闻 · 经济 · 政治', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 20 },
+            { id: 27, title: 'Thuyết trình đơn giản', target: '首先 · 其次 · 最后', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 28, title: 'Đàm phán & thương lượng', target: '价格 · 合同 · 合作', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 20 },
+            { id: 29, title: 'Viết email & tin nhắn', target: '尊敬的 · 感谢 · 此致', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 30, title: 'Tổng kết & giao tiếp tự do', target: '总结 · 复习 · 自由交流', level: 'advanced', levelText: 'Nâng cao', time: 30, words: 25 }
+        ],
+        vocab: [
+            { target: '你好', pinyin: 'nǐ hǎo', meaning: 'Xin chào', example: '你好，我叫小明。' },
+            { target: '谢谢', pinyin: 'xiè xie', meaning: 'Cảm ơn', example: '谢谢你帮我。' },
+            { target: '再见', pinyin: 'zài jiàn', meaning: 'Tạm biệt', example: '明天见，再见！' },
+            { target: '对不起', pinyin: 'duì bù qǐ', meaning: 'Xin lỗi', example: '对不起，我来晚了。' },
+            { target: '没关系', pinyin: 'méi guān xi', meaning: 'Không sao', example: '没关系，我等你。' },
+            { target: '请问', pinyin: 'qǐng wèn', meaning: 'Xin hỏi', example: '请问，洗手间在哪里？' },
+            { target: '学习', pinyin: 'xué xí', meaning: 'Học tập', example: '我在学习汉语。' },
+            { target: '工作', pinyin: 'gōng zuò', meaning: 'Công việc', example: '我的工作很忙。' },
+            { target: '朋友', pinyin: 'péng you', meaning: 'Bạn bè', example: '他是我的好朋友。' },
+            { target: '家人', pinyin: 'jiā rén', meaning: 'Gia đình', example: '我很爱我的家人。' },
+            { target: '吃饭', pinyin: 'chī fàn', meaning: 'Ăn cơm', example: '你吃饭了吗？' },
+            { target: '喝水', pinyin: 'hē shuǐ', meaning: 'Uống nước', example: '我想喝水。' },
+            { target: '睡觉', pinyin: 'shuì jiào', meaning: 'Ngủ', example: '我每天十点睡觉。' },
+            { target: '起床', pinyin: 'qǐ chuáng', meaning: 'Thức dậy', example: '我早上六点起床。' },
+            { target: '喜欢', pinyin: 'xǐ huān', meaning: 'Thích', example: '我喜欢听音乐。' },
+            { target: '爱', pinyin: 'ài', meaning: 'Yêu', example: '我爱你。' },
+            { target: '漂亮', pinyin: 'piào liang', meaning: 'Xinh đẹp', example: '你今天很漂亮。' },
+            { target: '聪明', pinyin: 'cōng ming', meaning: 'Thông minh', example: '他很聪明。' },
+            { target: '高兴', pinyin: 'gāo xìng', meaning: 'Vui vẻ', example: '我很高兴认识你。' },
+            { target: '难过', pinyin: 'nán guò', meaning: 'Buồn', example: '别难过，一切都会好的。' },
+            { target: '学习', pinyin: 'xué xí', meaning: 'Học', example: '我们一起学习吧。' },
+            { target: '老师', pinyin: 'lǎo shī', meaning: 'Giáo viên', example: '王老师很好。' },
+            { target: '学生', pinyin: 'xué sheng', meaning: 'Học sinh', example: '我是学生。' },
+            { target: '中文', pinyin: 'zhōng wén', meaning: 'Tiếng Trung', example: '我学中文。' },
+            { target: '汉语', pinyin: 'hàn yǔ', meaning: 'Hán ngữ', example: '汉语很难。' },
+            { target: '什么', pinyin: 'shén me', meaning: 'Cái gì', example: '你叫什么名字？' },
+            { target: '哪里', pinyin: 'nǎ lǐ', meaning: 'Ở đâu', example: '洗手间在哪里？' },
+            { target: '几', pinyin: 'jǐ', meaning: 'Mấy', example: '现在几点？' },
+            { target: '钱', pinyin: 'qián', meaning: 'Tiền', example: '多少钱？' },
+            { target: '吃', pinyin: 'chī', meaning: 'Ăn', example: '我想吃面条。' }
+        ]
+    },
+    kr: {
+        code: 'kr', flag: '🇰🇷', name: 'Tiếng Hàn Quốc', logoIcon: '한',
+        heroBg1: '한국', heroBg2: '한글',
+        heroTitle: 'Học tiếng <span>Hàn</span><br>từ A đến Z giao tiếp đơn giản',
+        heroDesc: 'Phương pháp học hiện đại: Hangul chuẩn, phát âm bản xứ, bài tập tương tác. Hoàn toàn miễn phí.',
+        heroBadgeText: '30 bài học · Miễn phí 100% · 5 ngôn ngữ',
+        langLabel1: 'tiếng Hàn',
+        langLabel2: 'Học tuần tự 30 bài, kết thúc có thể giao tiếp đơn giản với người Hàn Quốc.',
+        langDescription: 'Ngôn ngữ của làn sóng Hallyu – K-pop, K-drama, K-food. Học tiếng Hàn mở ra cơ hội làm việc tại các công ty Hàn Quốc.',
+        lessonsHeaderTitle: '30 bài tiếng Hàn',
+        speakLang: 'ko-KR', fontClass: 'hangul', theme: 'theme-kr',
+        lessons: [
+            { id: 1, title: 'Chào hỏi cơ bản', target: '안녕하세요 · 안녕 · 반갑습니다', level: 'beginner', levelText: 'Nhập môn', time: 15, words: 12 },
+            { id: 2, title: 'Hangul & bảng chữ cái', target: 'ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅅ', level: 'beginner', levelText: 'Nhập môn', time: 25, words: 0 },
+            { id: 3, title: 'Số đếm Hàn - Trung', target: '하나 둘 셋 · 일 이 삼', level: 'beginner', levelText: 'Nhập môn', time: 20, words: 20 },
+            { id: 4, title: 'Giới thiệu bản thân', target: '저는 ... 입니다 · 저는 베트남 사람이에요', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 15 },
+            { id: 5, title: 'Gia đình', target: '아버지 · 어머니 · 오빠 · 언니', level: 'beginner', levelText: 'Cơ bản', time: 18, words: 14 },
+            { id: 6, title: 'Thời gian & ngày tháng', target: '오늘 · 내일 · 지금 몇 시예요?', level: 'beginner', levelText: 'Cơ bản', time: 22, words: 18 },
+            { id: 7, title: 'Mua sắm & giá cả', target: '얼마예요? · 너무 비싸요', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 16 },
+            { id: 8, title: 'Gọi món ăn', target: '배고파요 · 김치찌개 주세요', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 15 },
+            { id: 9, title: 'Chỉ đường', target: '직진 · 왼쪽 · 오른쪽', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 10, title: 'Sở thích cá nhân', target: '저는 ...을 좋아해요', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 17 },
+            { id: 11, title: 'Du lịch Hàn Quốc', target: '표 · 공항 · 호텔', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 22 },
+            { id: 12, title: 'Công việc & nghề nghiệp', target: '저는 ...입니다', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 13, title: 'Cảm xúc & tâm trạng', target: '기뻐요 · 슬퍼요 · 화나요', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 14, title: 'Sức khỏe & bệnh viện', target: '머리가 아파요 · 감기에 걸렸어요', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 15, title: 'Thời tiết & mùa', target: '오늘 날씨가 좋아요', level: 'intermediate', levelText: 'Trung cấp', time: 20, words: 16 },
+            { id: 16, title: 'Ngân hàng & tiền tệ', target: '돈을 찾다 · 환전 · 환율', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 17, title: 'Điện thoại & internet', target: '전화하다 · 인터넷 · 카톡', level: 'intermediate', levelText: 'Trung cấp', time: 20, words: 15 },
+            { id: 18, title: 'Giao thông', target: '버스 · 지하철 · 택시', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 19, title: 'Nhà ở & thuê nhà', target: '집 · 월세 · 집주인', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 17 },
+            { id: 20, title: 'Học tập & trường học', target: '대학교 · 전공 · 시험', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 21, title: 'Kế hoạch tương lai', target: '계획 · 예정 · 나중에', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 20 },
+            { id: 22, title: 'Kể chuyện quá khứ', target: '예전에 · 이미 · 벌써', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 23, title: 'So sánh & lựa chọn', target: '보다 · ...만큼', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 16 },
+            { id: 24, title: 'Đưa ra lời khuyên', target: '...는 게 좋겠어요 · 꼭', level: 'advanced', levelText: 'Nâng cao', time: 22, words: 15 },
+            { id: 25, title: 'Văn hóa Hàn Quốc', target: '설날 · 추석 · 한복', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 22 },
+            { id: 26, title: 'Tin tức & thời sự', target: '뉴스 · 경제 · 정치', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 20 },
+            { id: 27, title: 'Thuyết trình đơn giản', target: '먼저 · 다음으로 · 마지막으로', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 28, title: 'Đàm phán & thương lượng', target: '가격 · 계약 · 협력', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 20 },
+            { id: 29, title: 'Viết email & tin nhắn', target: '존경하는 · 감사합니다 · 드림', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 30, title: 'Tổng kết & giao tiếp tự do', target: '정리 · 복습 · 자유롭게 대화', level: 'advanced', levelText: 'Nâng cao', time: 30, words: 25 }
+        ],
+        vocab: [
+            { target: '안녕하세요', pinyin: 'annyeonghaseyo', meaning: 'Xin chào', example: '안녕하세요, 저는 민수입니다.' },
+            { target: '감사합니다', pinyin: 'gamsahamnida', meaning: 'Cảm ơn', example: '도와주셔서 감사합니다.' },
+            { target: '안녕히 가세요', pinyin: 'annyeonghi gaseyo', meaning: 'Tạm biệt', example: '안녕히 가세요!' },
+            { target: '죄송합니다', pinyin: 'joesonghamnida', meaning: 'Xin lỗi', example: '늦어서 죄송합니다.' },
+            { target: '괜찮아요', pinyin: 'gwaenchanayo', meaning: 'Không sao', example: '괜찮아요, 기다릴게요.' },
+            { target: '실례합니다', pinyin: 'sillyehamnida', meaning: 'Xin lỗi', example: '실례합니다, 화장실이 어디예요?' },
+            { target: '공부', pinyin: 'gongbu', meaning: 'Học tập', example: '저는 한국어를 공부해요.' },
+            { target: '일', pinyin: 'il', meaning: 'Công việc', example: '제 일이 바빠요.' },
+            { target: '친구', pinyin: 'chingu', meaning: 'Bạn bè', example: '그는 제 좋은 친구예요.' },
+            { target: '가족', pinyin: 'gajok', meaning: 'Gia đình', example: '저는 가족을 사랑해요.' },
+            { target: '밥', pinyin: 'bap', meaning: 'Cơm', example: '밥 먹었어요?' },
+            { target: '물', pinyin: 'mul', meaning: 'Nước', example: '물을 마시고 싶어요.' },
+            { target: '자다', pinyin: 'jada', meaning: 'Ngủ', example: '저는 매일 10시에 자요.' },
+            { target: '일어나다', pinyin: 'ireonada', meaning: 'Thức dậy', example: '아침 6시에 일어나요.' },
+            { target: '좋아하다', pinyin: 'joahada', meaning: 'Thích', example: '음악 듣는 것을 좋아해요.' },
+            { target: '사랑', pinyin: 'sarang', meaning: 'Tình yêu', example: '사랑해요.' },
+            { target: '예쁘다', pinyin: 'yeppeuda', meaning: 'Xinh đẹp', example: '오늘 예뻐요.' },
+            { target: '똑똑하다', pinyin: 'ttokttokhada', meaning: 'Thông minh', example: '그는 똑똑해요.' },
+            { target: '기쁘다', pinyin: 'gippeuda', meaning: 'Vui vẻ', example: '만나서 기뻐요.' },
+            { target: '슬프다', pinyin: 'seulpeuda', meaning: 'Buồn', example: '슬퍼하지 마세요.' },
+            { target: '학교', pinyin: 'hakgyo', meaning: 'Trường học', example: '학교에 가요.' },
+            { target: '선생님', pinyin: 'seonsaengnim', meaning: 'Giáo viên', example: '선생님, 안녕하세요.' },
+            { target: '학생', pinyin: 'haksaeng', meaning: 'Học sinh', example: '저는 학생이에요.' },
+            { target: '한국어', pinyin: 'hangugeo', meaning: 'Tiếng Hàn', example: '한국어를 배워요.' },
+            { target: '무엇', pinyin: 'mueot', meaning: 'Cái gì', example: '이름이 무엇이에요?' },
+            { target: '어디', pinyin: 'eodi', meaning: 'Ở đâu', example: '화장실이 어디예요?' },
+            { target: '몇', pinyin: 'myeot', meaning: 'Mấy', example: '지금 몇 시예요?' },
+            { target: '돈', pinyin: 'don', meaning: 'Tiền', example: '얼마예요?' },
+            { target: '먹다', pinyin: 'meokda', meaning: 'Ăn', example: '밥을 먹어요.' },
+            { target: '마시다', pinyin: 'masida', meaning: 'Uống', example: '물을 마셔요.' }
+        ]
+    },
+    de: {
+        code: 'de', flag: '🇩🇪', name: 'Tiếng Đức', logoIcon: 'DE',
+        heroBg1: 'Hallo', heroBg2: 'Danke',
+        heroTitle: 'Học tiếng <span>Đức</span><br>từ A đến Z giao tiếp đơn giản',
+        heroDesc: 'Ngữ pháp bài bản, phát âm chuẩn, bài tập tương tác, từ điển mini. Hoàn toàn miễn phí.',
+        heroBadgeText: '30 bài học · Miễn phí 100% · 5 ngôn ngữ',
+        langLabel1: 'tiếng Đức',
+        langLabel2: 'Học tuần tự 30 bài, kết thúc có thể giao tiếp đơn giản với người Đức.',
+        langDescription: 'Ngôn ngữ phổ biến nhất châu Âu với hơn 100 triệu người nói. Học tiếng Đức mở ra cơ hội du học miễn phí và làm việc tại Đức.',
+        lessonsHeaderTitle: '30 bài tiếng Đức',
+        speakLang: 'de-DE', fontClass: 'latin', theme: 'theme-de',
+        lessons: [
+            { id: 1, title: 'Chào hỏi cơ bản', target: 'Hallo · Guten Tag · Tschüss', level: 'beginner', levelText: 'Nhập môn', time: 15, words: 12 },
+            { id: 2, title: 'Bảng chữ cái & phát âm', target: 'A B C D E F G · Ä Ö Ü ß', level: 'beginner', levelText: 'Nhập môn', time: 25, words: 0 },
+            { id: 3, title: 'Số đếm 1-100', target: 'eins zwei drei vier fünf zehn', level: 'beginner', levelText: 'Nhập môn', time: 20, words: 20 },
+            { id: 4, title: 'Giới thiệu bản thân', target: 'Ich heiße... · Ich komme aus Vietnam', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 15 },
+            { id: 5, title: 'Gia đình', target: 'Vater · Mutter · Bruder · Schwester', level: 'beginner', levelText: 'Cơ bản', time: 18, words: 14 },
+            { id: 6, title: 'Thời gian & ngày tháng', target: 'heute · morgen · Wie viel Uhr ist es?', level: 'beginner', levelText: 'Cơ bản', time: 22, words: 18 },
+            { id: 7, title: 'Mua sắm & giá cả', target: 'Wie viel kostet das? · zu teuer', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 16 },
+            { id: 8, title: 'Gọi món ăn', target: 'Ich habe Hunger · Ich möchte...', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 15 },
+            { id: 9, title: 'Chỉ đường', target: 'geradeaus · links · rechts', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 10, title: 'Sở thích cá nhân', target: 'Ich mag... · Am liebsten...', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 17 },
+            { id: 11, title: 'Du lịch Đức', target: 'Fahrkarte · Flughafen · Hotel', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 22 },
+            { id: 12, title: 'Công việc & nghề nghiệp', target: 'Ich bin... · Die Firma ist in...', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 13, title: 'Cảm xúc & tâm trạng', target: 'glücklich · traurig · wütend', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 14, title: 'Sức khỏe & bệnh viện', target: 'Kopfschmerzen · Erkältung · zum Arzt', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 15, title: 'Thời tiết & mùa', target: 'Heute ist das Wetter schön', level: 'intermediate', levelText: 'Trung cấp', time: 20, words: 16 },
+            { id: 16, title: 'Ngân hàng & tiền tệ', target: 'Geld abheben · Geld wechseln', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 17, title: 'Điện thoại & internet', target: 'anrufen · Internet · WhatsApp', level: 'intermediate', levelText: 'Trung cấp', time: 20, words: 15 },
+            { id: 18, title: 'Giao thông', target: 'Bus · U-Bahn · Taxi', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 19, title: 'Nhà ở & thuê nhà', target: 'Wohnung · Miete · Vermieter', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 17 },
+            { id: 20, title: 'Học tập & trường học', target: 'Universität · Studienfach · Prüfung', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 21, title: 'Kế hoạch tương lai', target: 'vorhaben · planen · später', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 20 },
+            { id: 22, title: 'Kể chuyện quá khứ', target: 'früher · schon · bereits', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 23, title: 'So sánh & lựa chọn', target: 'als · so...wie · oder', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 16 },
+            { id: 24, title: 'Đưa ra lời khuyên', target: 'sollte · besser · müssen', level: 'advanced', levelText: 'Nâng cao', time: 22, words: 15 },
+            { id: 25, title: 'Văn hóa Đức', target: 'Weihnachten · Oktoberfest · Karneval', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 22 },
+            { id: 26, title: 'Tin tức & thời sự', target: 'Nachrichten · Wirtschaft · Politik', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 20 },
+            { id: 27, title: 'Thuyết trình đơn giản', target: 'zuerst · dann · zum Schluss', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 28, title: 'Đàm phán & thương lượng', target: 'Preis · Vertrag · Zusammenarbeit', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 20 },
+            { id: 29, title: 'Viết email & tin nhắn', target: 'Sehr geehrte · Vielen Dank · Mit freundlichen Grüßen', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 30, title: 'Tổng kết & giao tiếp tự do', target: 'Zusammenfassung · Wiederholung · frei sprechen', level: 'advanced', levelText: 'Nâng cao', time: 30, words: 25 }
+        ],
+        vocab: [
+            { target: 'Hallo', pinyin: 'ha-lo', meaning: 'Xin chào', example: 'Hallo, ich heiße Nam.' },
+            { target: 'Danke', pinyin: 'đan-kơ', meaning: 'Cảm ơn', example: 'Danke für deine Hilfe.' },
+            { target: 'Tschüss', pinyin: 'chứt', meaning: 'Tạm biệt', example: 'Tschüss, bis morgen!' },
+            { target: 'Entschuldigung', pinyin: 'en-sun-đi-gung', meaning: 'Xin lỗi', example: 'Entschuldigung, ich komme zu spät.' },
+            { target: 'Kein Problem', pinyin: 'kain prô-blêm', meaning: 'Không sao', example: 'Kein Problem, ich warte.' },
+            { target: 'Entschuldigen Sie', pinyin: 'en-sun-đi-gần zi', meaning: 'Xin lỗi', example: 'Entschuldigen Sie, wo ist die Toilette?' },
+            { target: 'lernen', pinyin: 'len-nần', meaning: 'Học tập', example: 'Ich lerne Deutsch.' },
+            { target: 'Arbeit', pinyin: 'a-bait', meaning: 'Công việc', example: 'Meine Arbeit ist stressig.' },
+            { target: 'Freund', pinyin: 'fròi-nt', meaning: 'Bạn bè', example: 'Er ist mein guter Freund.' },
+            { target: 'Familie', pinyin: 'pha-mi-li-ơ', meaning: 'Gia đình', example: 'Ich liebe meine Familie.' },
+            { target: 'essen', pinyin: 'e-sần', meaning: 'Ăn', example: 'Hast du schon gegessen?' },
+            { target: 'Wasser', pinyin: 'va-sờ', meaning: 'Nước', example: 'Ich möchte Wasser trinken.' },
+            { target: 'schlafen', pinyin: 'su-la-phần', meaning: 'Ngủ', example: 'Ich schlafe um 10 Uhr.' },
+            { target: 'aufstehen', pinyin: 'ao-su-tê-ần', meaning: 'Thức dậy', example: 'Ich stehe um 6 Uhr auf.' },
+            { target: 'mögen', pinyin: 'mơ-gần', meaning: 'Thích', example: 'Ich mag Musik hören.' },
+            { target: 'Liebe', pinyin: 'li-bơ', meaning: 'Tình yêu', example: 'Ich liebe dich.' },
+            { target: 'schön', pinyin: 'sần', meaning: 'Xinh đẹp', example: 'Du siehst heute schön aus.' },
+            { target: 'klug', pinyin: 'khu-c', meaning: 'Thông minh', example: 'Er ist sehr klug.' },
+            { target: 'glücklich', pinyin: 'glưk-lích', meaning: 'Vui vẻ', example: 'Ich bin glücklich, dich zu treffen.' },
+            { target: 'traurig', pinyin: 'trao-rích', meaning: 'Buồn', example: 'Sei nicht traurig.' },
+            { target: 'Schule', pinyin: 'su-lờ', meaning: 'Trường học', example: 'Ich gehe zur Schule.' },
+            { target: 'Lehrer', pinyin: 'lê-rờ', meaning: 'Giáo viên', example: 'Der Lehrer ist gut.' },
+            { target: 'Student', pinyin: 'stu-đần', meaning: 'Sinh viên', example: 'Ich bin Student.' },
+            { target: 'Deutsch', pinyin: 'đoi-ch', meaning: 'Tiếng Đức', example: 'Ich lerne Deutsch.' },
+            { target: 'was', pinyin: 'vas', meaning: 'Cái gì', example: 'Wie heißt du?' },
+            { target: 'wo', pinyin: 'vô', meaning: 'Ở đâu', example: 'Wo ist die Toilette?' },
+            { target: 'wie viel', pinyin: 'vi phiu', meaning: 'Bao nhiêu', example: 'Wie viel kostet das?' },
+            { target: 'Geld', pinyin: 'gel-đ', meaning: 'Tiền', example: 'Ich habe kein Geld.' },
+            { target: 'trinken', pinyin: 'tờ-rin-kần', meaning: 'Uống', example: 'Ich trinke Wasser.' },
+            { target: 'gehen', pinyin: 'gê-ần', meaning: 'Đi', example: 'Ich gehe zur Schule.' },
+            { target: 'kommen', pinyin: 'cô-mần', meaning: 'Đến', example: 'Ich komme aus Vietnam.' }
+        ]
+    },
+    fr: {
+        code: 'fr', flag: '🇫🇷', name: 'Tiếng Pháp', logoIcon: 'FR',
+        heroBg1: 'Bonjour', heroBg2: 'Merci',
+        heroTitle: 'Học tiếng <span>Pháp</span><br>từ A đến Z giao tiếp đơn giản',
+        heroDesc: 'Ngữ pháp bài bản, phát âm chuẩn, bài tập tương tác. Hoàn toàn miễn phí.',
+        heroBadgeText: '30 bài học · Miễn phí 100% · 5 ngôn ngữ',
+        langLabel1: 'tiếng Pháp',
+        langLabel2: 'Học tuần tự 30 bài, kết thúc có thể giao tiếp đơn giản với người Pháp.',
+        langDescription: 'Ngôn ngữ của văn hóa, nghệ thuật và ẩm thực. Học tiếng Pháp mở ra cánh cửa đến châu Âu và châu Phi.',
+        lessonsHeaderTitle: '30 bài tiếng Pháp',
+        speakLang: 'fr-FR', fontClass: 'latin', theme: 'theme-fr',
+        lessons: [
+            { id: 1, title: 'Chào hỏi cơ bản', target: 'Bonjour · Salut · Au revoir', level: 'beginner', levelText: 'Nhập môn', time: 15, words: 12 },
+            { id: 2, title: 'Bảng chữ cái & phát âm', target: 'A B C D E F G · É È Ê À Ç', level: 'beginner', levelText: 'Nhập môn', time: 25, words: 0 },
+            { id: 3, title: 'Số đếm 1-100', target: 'un deux trois quatre cinq dix', level: 'beginner', levelText: 'Nhập môn', time: 20, words: 20 },
+            { id: 4, title: 'Giới thiệu bản thân', target: 'Je m\'appelle... · Je viens du Vietnam', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 15 },
+            { id: 5, title: 'Gia đình', target: 'père · mère · frère · sœur', level: 'beginner', levelText: 'Cơ bản', time: 18, words: 14 },
+            { id: 6, title: 'Thời gian & ngày tháng', target: 'aujourd\'hui · demain · Quelle heure est-il?', level: 'beginner', levelText: 'Cơ bản', time: 22, words: 18 },
+            { id: 7, title: 'Mua sắm & giá cả', target: 'Combien ça coûte? · trop cher', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 16 },
+            { id: 8, title: 'Gọi món ăn', target: 'J\'ai faim · Je voudrais...', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 15 },
+            { id: 9, title: 'Chỉ đường', target: 'tout droit · à gauche · à droite', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 10, title: 'Sở thích cá nhân', target: 'J\'aime... · Mon préféré...', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 17 },
+            { id: 11, title: 'Du lịch Pháp', target: 'billet · aéroport · hôtel', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 22 },
+            { id: 12, title: 'Công việc & nghề nghiệp', target: 'Je suis... · L\'entreprise est à...', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 13, title: 'Cảm xúc & tâm trạng', target: 'heureux · triste · en colère', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 14, title: 'Sức khỏe & bệnh viện', target: 'mal de tête · rhume · chez le médecin', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 15, title: 'Thời tiết & mùa', target: 'Aujourd\'hui il fait beau', level: 'intermediate', levelText: 'Trung cấp', time: 20, words: 16 },
+            { id: 16, title: 'Ngân hàng & tiền tệ', target: 'retirer de l\'argent · changer', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 17, title: 'Điện thoại & internet', target: 'appeler · Internet · WhatsApp', level: 'intermediate', levelText: 'Trung cấp', time: 20, words: 15 },
+            { id: 18, title: 'Giao thông', target: 'bus · métro · taxi', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 19, title: 'Nhà ở & thuê nhà', target: 'appartement · loyer · propriétaire', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 17 },
+            { id: 20, title: 'Học tập & trường học', target: 'université · spécialité · examen', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 21, title: 'Kế hoạch tương lai', target: 'projeter · planifier · plus tard', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 20 },
+            { id: 22, title: 'Kể chuyện quá khứ', target: 'autrefois · déjà · jadis', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 23, title: 'So sánh & lựa chọn', target: 'que · aussi...que · ou', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 16 },
+            { id: 24, title: 'Đưa ra lời khuyên', target: 'devrait · mieux · doit', level: 'advanced', levelText: 'Nâng cao', time: 22, words: 15 },
+            { id: 25, title: 'Văn hóa Pháp', target: 'Noël · Pâques · Carnaval', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 22 },
+            { id: 26, title: 'Tin tức & thời sự', target: 'actualités · économie · politique', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 20 },
+            { id: 27, title: 'Thuyết trình đơn giản', target: 'd\'abord · ensuite · enfin', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 28, title: 'Đàm phán & thương lượng', target: 'prix · contrat · coopération', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 20 },
+            { id: 29, title: 'Viết email & tin nhắn', target: 'Madame, Monsieur · Merci · Cordialement', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 30, title: 'Tổng kết & giao tiếp tự do', target: 'résumé · révision · parler librement', level: 'advanced', levelText: 'Nâng cao', time: 30, words: 25 }
+        ],
+        vocab: [
+            { target: 'Bonjour', pinyin: 'bông-ju', meaning: 'Xin chào', example: 'Bonjour, je m\'appelle Nam.' },
+            { target: 'Merci', pinyin: 'méc-si', meaning: 'Cảm ơn', example: 'Merci pour ton aide.' },
+            { target: 'Au revoir', pinyin: 'ô rờ-voa', meaning: 'Tạm biệt', example: 'Au revoir, à demain!' },
+            { target: 'Pardon', pinyin: 'pa-đông', meaning: 'Xin lỗi', example: 'Pardon, je suis en retard.' },
+            { target: 'Pas de problème', pinyin: 'pa đờ prô-blêm', meaning: 'Không sao', example: 'Pas de problème, j\'attends.' },
+            { target: 'Excusez-moi', pinyin: 'éc-xku-zê-moa', meaning: 'Xin lỗi', example: 'Excusez-moi, où sont les toilettes?' },
+            { target: 'apprendre', pinyin: 'a-prăng-đrờ', meaning: 'Học tập', example: 'J\'apprends le français.' },
+            { target: 'travail', pinyin: 'tra-vai', meaning: 'Công việc', example: 'Mon travail est stressant.' },
+            { target: 'ami', pinyin: 'a-mi', meaning: 'Bạn bè', example: 'Il est mon bon ami.' },
+            { target: 'famille', pinyin: 'pha-mi-yờ', meaning: 'Gia đình', example: 'J\'aime ma famille.' },
+            { target: 'manger', pinyin: 'măng-zhê', meaning: 'Ăn', example: 'As-tu déjà mangé?' },
+            { target: 'eau', pinyin: 'ô', meaning: 'Nước', example: 'Je voudrais boire de l\'eau.' },
+            { target: 'dormir', pinyin: 'đoóc-mia', meaning: 'Ngủ', example: 'Je dors à 10 heures.' },
+            { target: 'se lever', pinyin: 'sờ lờ-vê', meaning: 'Thức dậy', example: 'Je me lève à 6 heures.' },
+            { target: 'aimer', pinyin: 'ê-mê', meaning: 'Thích', example: 'J\'aime écouter de la musique.' },
+            { target: 'amour', pinyin: 'a-mua', meaning: 'Tình yêu', example: 'Je t\'aime.' },
+            { target: 'beau', pinyin: 'bô', meaning: 'Xinh đẹp', example: 'Tu es beau aujourd\'hui.' },
+            { target: 'intelligent', pinyin: 'anh-tê-li-zhăng', meaning: 'Thông minh', example: 'Il est très intelligent.' },
+            { target: 'heureux', pinyin: 'ơ-rờ', meaning: 'Vui vẻ', example: 'Je suis heureux de te rencontrer.' },
+            { target: 'triste', pinyin: 'tờ-rít', meaning: 'Buồn', example: 'Ne sois pas triste.' },
+            { target: 'école', pinyin: 'ê-côn', meaning: 'Trường học', example: 'Je vais à l\'école.' },
+            { target: 'professeur', pinyin: 'prô-phê-sơ', meaning: 'Giáo viên', example: 'Le professeur est bon.' },
+            { target: 'étudiant', pinyin: 'ê-tu-đi-ăng', meaning: 'Sinh viên', example: 'Je suis étudiant.' },
+            { target: 'français', pinyin: 'phrăng-xê', meaning: 'Tiếng Pháp', example: 'J\'apprends le français.' },
+            { target: 'quoi', pinyin: 'khoa', meaning: 'Cái gì', example: 'Comment tu t\'appelles?' },
+            { target: 'où', pinyin: 'u', meaning: 'Ở đâu', example: 'Où sont les toilettes?' },
+            { target: 'combien', pinyin: 'côm-bi-en', meaning: 'Bao nhiêu', example: 'Combien ça coûte?' },
+            { target: 'argent', pinyin: 'a-răng-zhăng', meaning: 'Tiền', example: 'Je n\'ai pas d\'argent.' },
+            { target: 'boire', pinyin: 'boa', meaning: 'Uống', example: 'Je bois de l\'eau.' },
+            { target: 'aller', pinyin: 'a-lê', meaning: 'Đi', example: 'Je vais à l\'école.' }
+        ]
+    },
+    it: {
+        code: 'it', flag: '🇮🇹', name: 'Tiếng Ý', logoIcon: 'IT',
+        heroBg1: 'Ciao', heroBg2: 'Grazie',
+        heroTitle: 'Học tiếng <span>Ý</span><br>từ A đến Z giao tiếp đơn giản',
+        heroDesc: 'Ngữ pháp bài bản, phát âm chuẩn, bài tập tương tác. Hoàn toàn miễn phí.',
+        heroBadgeText: '30 bài học · Miễn phí 100% · 5 ngôn ngữ',
+        langLabel1: 'tiếng Ý',
+        langLabel2: 'Học tuần tự 30 bài, kết thúc có thể giao tiếp đơn giản với người Ý.',
+        langDescription: 'Ngôn ngữ của nghệ thuật, âm nhạc và ẩm thực. Học tiếng Ý mở ra cơ hội du lịch, học tập và làm việc tại Ý.',
+        lessonsHeaderTitle: '30 bài tiếng Ý',
+        speakLang: 'it-IT', fontClass: 'latin', theme: 'theme-it',
+        lessons: [
+            { id: 1, title: 'Chào hỏi cơ bản', target: 'Ciao · Buongiorno · Arrivederci', level: 'beginner', levelText: 'Nhập môn', time: 15, words: 12 },
+            { id: 2, title: 'Bảng chữ cái & phát âm', target: 'A B C D E F G · À È É Ì Ò Ù', level: 'beginner', levelText: 'Nhập môn', time: 25, words: 0 },
+            { id: 3, title: 'Số đếm 1-100', target: 'uno due tre quattro cinque dieci', level: 'beginner', levelText: 'Nhập môn', time: 20, words: 20 },
+            { id: 4, title: 'Giới thiệu bản thân', target: 'Mi chiamo... · Vengo dal Vietnam', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 15 },
+            { id: 5, title: 'Gia đình', target: 'padre · madre · fratello · sorella', level: 'beginner', levelText: 'Cơ bản', time: 18, words: 14 },
+            { id: 6, title: 'Thời gian & ngày tháng', target: 'oggi · domani · Che ore sono?', level: 'beginner', levelText: 'Cơ bản', time: 22, words: 18 },
+            { id: 7, title: 'Mua sắm & giá cả', target: 'Quanto costa? · troppo caro', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 16 },
+            { id: 8, title: 'Gọi món ăn', target: 'Ho fame · Vorrei...', level: 'beginner', levelText: 'Cơ bản', time: 20, words: 15 },
+            { id: 9, title: 'Chỉ đường', target: 'sempre dritto · a sinistra · a destra', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 10, title: 'Sở thích cá nhân', target: 'Mi piace... · Il mio preferito...', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 17 },
+            { id: 11, title: 'Du lịch Ý', target: 'biglietto · aeroporto · albergo', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 22 },
+            { id: 12, title: 'Công việc & nghề nghiệp', target: 'Sono... · L\'azienda è a...', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 13, title: 'Cảm xúc & tâm trạng', target: 'felice · triste · arrabbiato', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 14, title: 'Sức khỏe & bệnh viện', target: 'mal di testa · raffreddore · dal medico', level: 'intermediate', levelText: 'Trung cấp', time: 25, words: 20 },
+            { id: 15, title: 'Thời tiết & mùa', target: 'Oggi fa bel tempo', level: 'intermediate', levelText: 'Trung cấp', time: 20, words: 16 },
+            { id: 16, title: 'Ngân hàng & tiền tệ', target: 'prelevare · cambiare · tasso', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 17, title: 'Điện thoại & internet', target: 'chiamare · Internet · WhatsApp', level: 'intermediate', levelText: 'Trung cấp', time: 20, words: 15 },
+            { id: 18, title: 'Giao thông', target: 'autobus · metropolitana · taxi', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 19, title: 'Nhà ở & thuê nhà', target: 'appartamento · affitto · padrone', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 17 },
+            { id: 20, title: 'Học tập & trường học', target: 'università · specialità · esame', level: 'intermediate', levelText: 'Trung cấp', time: 22, words: 18 },
+            { id: 21, title: 'Kế hoạch tương lai', target: 'progettare · pianificare · più tardi', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 20 },
+            { id: 22, title: 'Kể chuyện quá khứ', target: 'una volta · già · tempo fa', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 23, title: 'So sánh & lựa chọn', target: 'di · così...come · o', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 16 },
+            { id: 24, title: 'Đưa ra lời khuyên', target: 'dovrebbe · meglio · deve', level: 'advanced', levelText: 'Nâng cao', time: 22, words: 15 },
+            { id: 25, title: 'Văn hóa Ý', target: 'Natale · Pasqua · Carnevale', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 22 },
+            { id: 26, title: 'Tin tức & thời sự', target: 'notizie · economia · politica', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 20 },
+            { id: 27, title: 'Thuyết trình đơn giản', target: 'prima · poi · infine', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 28, title: 'Đàm phán & thương lượng', target: 'prezzo · contratto · cooperazione', level: 'advanced', levelText: 'Nâng cao', time: 28, words: 20 },
+            { id: 29, title: 'Viết email & tin nhắn', target: 'Gentile · Grazie · Cordiali saluti', level: 'advanced', levelText: 'Nâng cao', time: 25, words: 18 },
+            { id: 30, title: 'Tổng kết & giao tiếp tự do', target: 'riassunto · ripasso · parlare liberamente', level: 'advanced', levelText: 'Nâng cao', time: 30, words: 25 }
+        ],
+        vocab: [
+            { target: 'Ciao', pinyin: 'chao', meaning: 'Xin chào', example: 'Ciao, mi chiamo Nam.' },
+            { target: 'Grazie', pinyin: 'gra-tsi-ê', meaning: 'Cảm ơn', example: 'Grazie per il tuo aiuto.' },
+            { target: 'Arrivederci', pinyin: 'a-ri-vê-đéc-chi', meaning: 'Tạm biệt', example: 'Arrivederci, a domani!' },
+            { target: 'Scusa', pinyin: 'sku-za', meaning: 'Xin lỗi', example: 'Scusa, sono in ritardo.' },
+            { target: 'Nessun problema', pinyin: 'nê-sun prô-blê-ma', meaning: 'Không sao', example: 'Nessun problema, aspetto.' },
+            { target: 'Mi scusi', pinyin: 'mi sku-zi', meaning: 'Xin lỗi', example: 'Mi scusi, dov\'è il bagno?' },
+            { target: 'studiare', pinyin: 'stu-đia-rê', meaning: 'Học tập', example: 'Sto studiando l\'italiano.' },
+            { target: 'lavoro', pinyin: 'la-vô-rô', meaning: 'Công việc', example: 'Il mio lavoro è stressante.' },
+            { target: 'amico', pinyin: 'a-mi-cô', meaning: 'Bạn bè', example: 'Lui è il mio buon amico.' },
+            { target: 'famiglia', pinyin: 'pha-mi-li-a', meaning: 'Gia đình', example: 'Amo la mia famiglia.' },
+            { target: 'mangiare', pinyin: 'măn-ja-rê', meaning: 'Ăn', example: 'Hai già mangiato?' },
+            { target: 'acqua', pinyin: 'ac-qua', meaning: 'Nước', example: 'Vorrei bere dell\'acqua.' },
+            { target: 'dormire', pinyin: 'đoóc-mi-rê', meaning: 'Ngủ', example: 'Dormo alle 10.' },
+            { target: 'alzarsi', pinyin: 'an-tsa-ri', meaning: 'Thức dậy', example: 'Mi alzo alle 6.' },
+            { target: 'piacere', pinyin: 'pia-chê-rê', meaning: 'Thích', example: 'Mi piace ascoltare musica.' },
+            { target: 'amore', pinyin: 'a-mô-rê', meaning: 'Tình yêu', example: 'Ti amo.' },
+            { target: 'bello', pinyin: 'bê-lô', meaning: 'Xinh đẹp', example: 'Sei bello oggi.' },
+            { target: 'intelligente', pinyin: 'in-tê-li-jên-tê', meaning: 'Thông minh', example: 'È molto intelligente.' },
+            { target: 'felice', pinyin: 'phê-li-chê', meaning: 'Vui vẻ', example: 'Sono felice di incontrarti.' },
+            { target: 'triste', pinyin: 'tờ-ri-stê', meaning: 'Buồn', example: 'Non essere triste.' },
+            { target: 'scuola', pinyin: 'sku-ô-la', meaning: 'Trường học', example: 'Vado a scuola.' },
+            { target: 'insegnante', pinyin: 'in-sê-nhan-tê', meaning: 'Giáo viên', example: 'L\'insegnante è bravo.' },
+            { target: 'studente', pinyin: 'stu-đên-tê', meaning: 'Học sinh', example: 'Sono studente.' },
+            { target: 'italiano', pinyin: 'i-ta-li-a-nô', meaning: 'Tiếng Ý', example: 'Sto imparando l\'italiano.' },
+            { target: 'cosa', pinyin: 'cô-za', meaning: 'Cái gì', example: 'Come ti chiami?' },
+            { target: 'dove', pinyin: 'đô-vê', meaning: 'Ở đâu', example: 'Dov\'è il bagno?' },
+            { target: 'quanto', pinyin: 'quan-tô', meaning: 'Bao nhiêu', example: 'Quanto costa?' },
+            { target: 'soldi', pinyin: 'sôn-đi', meaning: 'Tiền', example: 'Non ho soldi.' },
+            { target: 'bere', pinyin: 'bê-rê', meaning: 'Uống', example: 'Bevo acqua.' },
+            { target: 'andare', pinyin: 'an-đa-rê', meaning: 'Đi', example: 'Vado a scuola.' }
+        ]
+    }
+};
+
+// ============ BLOG POSTS (Feature 4) ============
+const BLOG_POSTS = [
+    { tag: 'Mẹo học', title: 'Cách nhớ 100 chữ Hán trong 1 tháng', desc: 'Phương pháp chiết tự và liên tưởng giúp bạn nhớ chữ Hán nhanh gấp 3 lần.', thumb: '汉', time: '5 phút đọc', date: '2 ngày trước' },
+    { tag: 'Giao tiếp', title: '50 câu giao tiếp tiếng Trung thông dụng nhất', desc: 'Tổng hợp 50 câu giao tiếp hàng ngày mà người mới học cần biết.', thumb: '话', time: '8 phút đọc', date: '3 ngày trước' },
+    { tag: 'Ngữ pháp', title: 'Phân biệt 的 / 得 / 地 – 3 trợ từ dễ nhầm', desc: 'Ba trợ từ này khiến nhiều người học nhầm lẫn. Bài viết giúp bạn phân biệt rõ.', thumb: '的', time: '6 phút đọc', date: '5 ngày trước' },
+    { tag: 'Hàn Quốc', title: 'Học Hangul trong 1 tuần – có khó không?', desc: 'Bảng chữ cái Hàn Quốc không khó như bạn nghĩ. Đây là cách học hiệu quả.', thumb: '한', time: '7 phút đọc', date: '1 tuần trước' },
+    { tag: 'Đức', title: 'Ngữ pháp tiếng Đức cho người mới bắt đầu', desc: 'Tổng hợp ngữ pháp cơ bản nhất: chia động từ, 4 cách (Kasus), giống danh từ.', thumb: 'DE', time: '10 phút đọc', date: '1 tuần trước' },
+    { tag: 'Pháp', title: 'Phát âm tiếng Pháp chuẩn như người bản xứ', desc: 'Hướng dẫn phát âm các âm khó: /ʁ/, /ɑ̃/, /ɔ̃/, /ɛ̃/ và quy tắc nối âm.', thumb: 'FR', time: '8 phút đọc', date: '2 tuần trước' },
+    { tag: 'Ý', title: '10 câu tiếng Ý hay dùng khi du lịch', desc: 'Bỏ túi ngay 10 câu giao tiếp cần thiết khi du lịch Ý: gọi món, hỏi đường, mua sắm.', thumb: 'IT', time: '5 phút đọc', date: '2 tuần trước' },
+    { tag: 'So sánh', title: 'Nên học tiếng Trung hay tiếng Hàn?', desc: 'So sánh ưu nhược điểm của 2 ngôn ngữ hot nhất châu Á hiện nay.', thumb: '?', time: '12 phút đọc', date: '3 tuần trước' },
+    { tag: 'Kinh nghiệm', title: 'Lộ trình học ngoại ngữ từ 0 đến giao tiếp', desc: 'Lộ trình 6 tháng giúp bạn giao tiếp cơ bản bất kỳ ngôn ngữ nào.', thumb: '学', time: '10 phút đọc', date: '3 tuần trước' }
+];
+
+// ============ ACHIEVEMENTS (Feature 7) ============
+const ACHIEVEMENTS = [
+    { id: 'newbie', icon: '🌱', name: 'Người mới', desc: 'Học xong 1 bài', check: (s) => s.lessonsDone.length >= 1 },
+    { id: 'beginner', icon: '🥉', name: 'Nhập môn', desc: 'Học xong 5 bài', check: (s) => s.lessonsDone.length >= 5 },
+    { id: 'hardworking', icon: '🥈', name: 'Siêng năng', desc: 'Học 7 ngày liên tiếp', check: (s) => s.streak >= 7 },
+    { id: 'expert', icon: '🥇', name: 'Chuyên gia', desc: 'Hoàn thành 30 bài', check: (s) => s.lessonsDone.length >= 30 },
+    { id: 'master', icon: '💎', name: 'Bậc thầy', desc: 'Đạt 100% quiz', check: (s) => s.bestQuiz >= 100 },
+    { id: 'polyglot', icon: '🌟', name: 'Đa ngôn ngữ', desc: 'Học 3 ngôn ngữ khác nhau', check: (s) => Object.keys(s.progress).length >= 3 },
+    { id: 'streak30', icon: '🔥', name: 'Streak 30 ngày', desc: 'Học 30 ngày liên tiếp', check: (s) => s.streak >= 30 },
+    { id: 'flashcard', icon: '🎴', name: 'Flashcard Pro', desc: 'Thuộc 20 từ vựng', check: (s) => s.flashcardsKnown >= 20 },
+    { id: 'game', icon: '🎮', name: 'Game thủ', desc: 'Đạt 10 điểm mini-game', check: (s) => s.bestGame >= 10 },
+    { id: 'listener', icon: '🎧', name: 'Thính giả', desc: 'Nghe đúng 10 từ', check: (s) => s.listeningCorrect >= 10 },
+    { id: 'community', icon: '💬', name: 'Cộng đồng', desc: 'Đăng 1 bình luận', check: (s) => s.commentsPosted >= 1 }
+];
+
+// ============ STATE ============
+let currentLang = 'cn';
+let currentData = LANGUAGES.cn;
+let currentCardIndex = 0;
+let quizQuestions = [];
+let quizCurrent = 0;
+let quizScore = 0;
+let listenCurrent = 0;
+let listenCorrect = 0;
+let gameState = { correct: 0, wrong: 0, time: 0, timer: null, selectedLeft: null, pairs: [] };
+let flashcardKnown = new Set();
+let flashcardUnknown = new Set();
+
+// Progress state (Feature 2)
+let userProgress = {
+    lessonsDone: JSON.parse(localStorage.getItem('nd_lessons') || '[]'),
+    progress: JSON.parse(localStorage.getItem('nd_progress') || '{}'),
+    streak: parseInt(localStorage.getItem('nd_streak') || '0'),
+    lastVisit: localStorage.getItem('nd_last_visit') || '',
+    bestQuiz: parseInt(localStorage.getItem('nd_bestQuiz') || '0'),
+    bestGame: parseInt(localStorage.getItem('nd_bestGame') || '0'),
+    flashcardsKnown: parseInt(localStorage.getItem('nd_fcKnown') || '0'),
+    listeningCorrect: parseInt(localStorage.getItem('nd_listenCorrect') || '0'),
+    commentsPosted: parseInt(localStorage.getItem('nd_commentsPosted') || '0'),
+    darkMode: localStorage.getItem('nd_darkMode') === 'true'
+};
+let comments = JSON.parse(localStorage.getItem('nd_comments') || '[]');
+
+// ============ DARK MODE (Feature 6) ============
+function toggleDarkMode() {
+    userProgress.darkMode = !userProgress.darkMode;
+    document.body.classList.toggle('dark-mode', userProgress.darkMode);
+    document.getElementById('darkModeBtn').innerHTML = userProgress.darkMode 
+        ? '<i class="fa-solid fa-sun"></i>' 
+        : '<i class="fa-solid fa-moon"></i>';
+    localStorage.setItem('nd_darkMode', userProgress.darkMode);
+    showToast(userProgress.darkMode ? '🌙 Đã bật chế độ tối' : '☀️ Đã bật chế độ sáng');
+}
+
+// ============ PROGRESS (Feature 2) ============
+function saveProgress() {
+    localStorage.setItem('nd_lessons', JSON.stringify(userProgress.lessonsDone));
+    localStorage.setItem('nd_progress', JSON.stringify(userProgress.progress));
+    localStorage.setItem('nd_streak', userProgress.streak);
+    localStorage.setItem('nd_bestQuiz', userProgress.bestQuiz);
+    localStorage.setItem('nd_bestGame', userProgress.bestGame);
+    localStorage.setItem('nd_fcKnown', userProgress.flashcardsKnown);
+    localStorage.setItem('nd_listenCorrect', userProgress.listeningCorrect);
+    localStorage.setItem('nd_commentsPosted', userProgress.commentsPosted);
+}
+
+function updateStreak() {
+    const today = new Date().toDateString();
+    const last = userProgress.lastVisit;
+    if (last !== today) {
+        const yesterday = new Date(Date.now() - 86400000).toDateString();
+        if (last === yesterday) {
+            userProgress.streak++;
+        } else if (last === '') {
+            userProgress.streak = 1;
+        } else {
+            userProgress.streak = 1;
+        }
+        userProgress.lastVisit = today;
+        saveProgress();
+    }
+    // Cập nhật UI
+    document.getElementById('streakCount').textContent = userProgress.streak;
+    document.getElementById('streakCountPage').textContent = userProgress.streak;
+}
+
+function updateProgressUI() {
+    const total = currentData.lessons.length;
+    const done = userProgress.lessonsDone.filter(id => id <= total).length;
+    const pct = Math.round(done / total * 100);
+    document.getElementById('homeProgressBar').style.width = pct + '%';
+    document.getElementById('homeProgressText').textContent = `${done}/${total} bài đã hoàn thành`;
+    document.getElementById('homeProgressPercent').textContent = pct + '%';
+    if (document.getElementById('progressPageBar')) {
+        document.getElementById('progressPageBar').style.width = pct + '%';
+        document.getElementById('progressPageText').textContent = `${done}/${total} bài đã hoàn thành`;
+        document.getElementById('progressPagePercent').textContent = pct + '%';
+        document.getElementById('statLessonsDone').textContent = done + ' bài';
+        document.getElementById('statFlashcards').textContent = userProgress.flashcardsKnown + ' từ';
+        document.getElementById('statQuiz').textContent = userProgress.bestQuiz + '%';
+        document.getElementById('statGame').textContent = userProgress.bestGame + ' điểm';
+    }
+    renderAchievements();
+}
+
+function markLessonDone(id) {
+    if (!userProgress.lessonsDone.includes(id)) {
+        userProgress.lessonsDone.push(id);
+        saveProgress();
+        updateProgressUI();
+        showToast('✅ Đã đánh dấu bài học hoàn thành!');
+    }
+}
+
+// ============ ACHIEVEMENTS (Feature 7) ============
+function renderAchievements() {
+    const html = ACHIEVEMENTS.map(a => {
+        const unlocked = a.check(userProgress);
+        return `
+            <div class="achievement-card ${unlocked ? 'unlocked' : 'locked'}">
+                <div class="ach-icon">${a.icon}</div>
+                <div class="ach-name">${a.name}</div>
+                <div class="ach-desc">${a.desc}</div>
+            </div>
+        `;
+    }).join('');
+    if (document.getElementById('achievementsGrid')) document.getElementById('achievementsGrid').innerHTML = html;
+    if (document.getElementById('achievementsGridPage')) document.getElementById('achievementsGridPage').innerHTML = html;
+}
+
+function resetProgress() {
+    if (!confirm('Bạn có chắc muốn xóa toàn bộ tiến độ? Hành động này không thể hoàn tác.')) return;
+    localStorage.clear();
+    location.reload();
+}
+
+// ============ LANGUAGE SWITCH ============
+function switchLanguage(langCode) {
+    currentLang = langCode;
+    currentData = LANGUAGES[langCode];
+    
+    document.body.className = currentData.theme + (userProgress.darkMode ? ' dark-mode' : '');
+    
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === langCode);
+    });
+    
+    document.getElementById('logoIcon').textContent = currentData.logoIcon;
+    document.getElementById('footerLogoIcon').textContent = currentData.logoIcon;
+    
+    const heroSection = document.getElementById('heroSection');
+    heroSection.dataset.bg1 = currentData.heroBg1;
+    heroSection.dataset.bg2 = currentData.heroBg2;
+    document.getElementById('heroTitle').innerHTML = currentData.heroTitle;
+    document.getElementById('heroDesc').textContent = currentData.heroDesc;
+    document.getElementById('heroBadgeText').textContent = currentData.heroBadgeText;
+    
+    document.getElementById('langFlagBig').textContent = currentData.flag;
+    document.getElementById('langName').textContent = currentData.name;
+    document.getElementById('langDescription').textContent = currentData.langDescription;
+    document.getElementById('langLabel1').textContent = currentData.langLabel1;
+    document.getElementById('langLabel2').textContent = currentData.langLabel2;
+    document.getElementById('lessonsHeaderTitle').textContent = currentData.lessonsHeaderTitle;
+    
+    // Track language for polyglot achievement
+    userProgress.progress[langCode] = true;
+    saveProgress();
+    
+    renderHomeLessons();
+    renderAllLessons();
+    renderFlashcard();
+    searchDict();
+    updateProgressUI();
+    initListening();
+    startGame();
+    
+    if (document.getElementById('view-quiz').classList.contains('active')) {
+        startQuiz();
+    }
+    
+    showToast(`Đã chuyển sang ${currentData.name} ${currentData.flag}`);
+}
+
+// ============ VIEW SYSTEM ============
+function showView(viewName, data) {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    const target = document.getElementById('view-' + viewName);
+    if (target) {
+        target.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    document.querySelectorAll('.nav-links a').forEach(a => {
+        a.classList.toggle('active', a.dataset.view === viewName);
+    });
+    
+    document.getElementById('navLinks').classList.remove('mobile-open');
+    
+    if (viewName === 'lesson-detail' && data) renderLessonDetail(data);
+    if (viewName === 'quiz') startQuiz();
+    if (viewName === 'dictionary') searchDict();
+    if (viewName === 'listening') initListening();
+    if (viewName === 'game') startGame();
+    if (viewName === 'community') renderComments();
+    if (viewName === 'progress') updateProgressUI();
+    if (viewName === 'blog') renderBlog();
+}
+
+function toggleMobileMenu() {
+    document.getElementById('navLinks').classList.toggle('mobile-open');
+}
+
+// ============ RENDER LESSONS ============
+function lessonCardHTML(lesson) {
+    const done = userProgress.lessonsDone.includes(lesson.id);
+    return `
+        <div class="lesson-card ${done ? 'completed' : ''}" onclick="openLesson(${lesson.id})">
+            <div class="lesson-num ${currentData.fontClass}">${lesson.id}</div>
+            <span class="lesson-level ${lesson.level}">${lesson.levelText}</span>
+            <h3>Bài ${lesson.id}: ${lesson.title}</h3>
+            <div class="target-lang ${currentData.fontClass}">${lesson.target}</div>
+            <div class="lesson-meta">
+                <span><i class="fa-solid fa-clock"></i> ${lesson.time} phút</span>
+                <span><i class="fa-solid fa-book"></i> ${lesson.words > 0 ? lesson.words + ' từ' : 'Nền tảng'}</span>
+            </div>
+        </div>
+    `;
+}
+
+function renderHomeLessons() {
+    document.getElementById('homeLessonGrid').innerHTML = currentData.lessons.slice(0, 6).map(lessonCardHTML).join('');
+}
+
+function renderAllLessons() {
+    document.getElementById('allLessonGrid').innerHTML = currentData.lessons.map(lessonCardHTML).join('');
+}
+
+function openLesson(id) {
+    const lesson = currentData.lessons.find(l => l.id === id);
+    if (!lesson) return;
+    showView('lesson-detail', lesson);
+}
+
+// ============ LESSON DETAIL ============
+function renderLessonDetail(lesson) {
+    const vocabSample = currentData.vocab.slice(0, 8);
+    const done = userProgress.lessonsDone.includes(lesson.id);
+    
+    const html = `
+        <div style="background:var(--card); border-radius:1.5rem; padding:2.5rem; border:1px solid var(--border); position:relative;">
+            <h1 style="font-size:2rem; font-weight:800; margin-bottom:0.5rem; font-family:'Playfair Display',serif;">Bài ${lesson.id}: ${lesson.title}</h1>
+            <div class="${currentData.fontClass}" style="font-size:1.3rem; color:var(--primary); font-weight:500; margin-bottom:1.5rem;">${lesson.target}</div>
+            
+            <div style="background:linear-gradient(135deg, rgba(124,58,237,0.04), rgba(236,72,153,0.04)); border-left:4px solid var(--primary); border-radius:0.8rem; padding:1.5rem; margin:1.5rem 0;">
+                <h4 style="color:var(--primary); font-size:1rem; margin-bottom:0.8rem;"><i class="fa-solid fa-lightbulb"></i> Mục tiêu bài học</h4>
+                <p style="font-size:0.95rem; line-height:1.7;">Sau bài này, bạn sẽ nắm được ${lesson.words} từ vựng và các mẫu câu cơ bản. Hãy học từ vựng trước, sau đó luyện nghe và làm bài tập.</p>
+            </div>
+            
+            <h3 style="margin: 1.5rem 0 1rem; font-size:1.3rem;"><i class="fa-solid fa-book" style="color:var(--primary);"></i> Từ vựng chính</h3>
+            <table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+                <thead>
+                    <tr>
+                        <th style="background:linear-gradient(135deg, rgba(124,58,237,0.05), rgba(236,72,153,0.05)); padding:0.9rem 1rem; text-align:left; font-size:0.85rem; font-weight:700; color:var(--primary); text-transform:uppercase; border-bottom:2px solid var(--border);">Từ vựng</th>
+                        <th style="background:linear-gradient(135deg, rgba(124,58,237,0.05), rgba(236,72,153,0.05)); padding:0.9rem 1rem; text-align:left; font-size:0.85rem; font-weight:700; color:var(--primary); text-transform:uppercase; border-bottom:2px solid var(--border);">Phiên âm</th>
+                        <th style="background:linear-gradient(135deg, rgba(124,58,237,0.05), rgba(236,72,153,0.05)); padding:0.9rem 1rem; text-align:left; font-size:0.85rem; font-weight:700; color:var(--primary); text-transform:uppercase; border-bottom:2px solid var(--border);">Nghĩa</th>
+                        <th style="background:linear-gradient(135deg, rgba(124,58,237,0.05), rgba(236,72,153,0.05)); padding:0.9rem 1rem; text-align:left; font-size:0.85rem; font-weight:700; color:var(--primary); text-transform:uppercase; border-bottom:2px solid var(--border);">Nghe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${vocabSample.map(v => `
+                        <tr>
+                            <td style="padding:1rem; border-bottom:1px solid var(--border);"><span class="${currentData.fontClass}" style="font-size:1.4rem; color:var(--primary); font-weight:700;">${v.target}</span></td>
+                            <td style="padding:1rem; border-bottom:1px solid var(--border); color:var(--blue); font-weight:600; font-size:0.95rem;">${v.pinyin}</td>
+                            <td style="padding:1rem; border-bottom:1px solid var(--border); font-weight:500;">${v.meaning}</td>
+                            <td style="padding:1rem; border-bottom:1px solid var(--border);">
+                                <button class="audio-btn" onclick="speak('${v.target.replace(/'/g, "\\'")}')">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+            
+            <div style="display:flex; gap:1rem; margin-top:2rem; flex-wrap:wrap;">
+                <button class="btn-primary" onclick="markLessonDone(${lesson.id}); showView('flashcard');">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Hoàn thành & Luyện Flashcard</span>
+                </button>
+                <button class="btn-outline" onclick="showView('listening')">
+                    <i class="fa-solid fa-headphones"></i> Luyện nghe
+                </button>
+                <button class="btn-outline" onclick="showView('quiz')">
+                    <i class="fa-solid fa-circle-question"></i> Trắc nghiệm
+                </button>
+                ${done ? '<span style="align-self:center; color:var(--green); font-weight:700;"><i class="fa-solid fa-circle-check"></i> Đã hoàn thành</span>' : ''}
+            </div>
+        </div>
+    `;
+    document.getElementById('lessonDetailContent').innerHTML = html;
+}
+
+// ============ FLASHCARD (Feature 3) ============
+function renderFlashcard() {
+    const v = currentData.vocab[currentCardIndex];
+    document.getElementById('fcTarget').textContent = v.target;
+    document.getElementById('fcTarget').className = 'fc-target ' + currentData.fontClass;
+    document.getElementById('fcPinyin').textContent = v.pinyin;
+    document.getElementById('fcMeaning').textContent = v.meaning;
+    document.getElementById('fcExample').textContent = v.example || '';
+    document.getElementById('fcCurrent').textContent = currentCardIndex + 1;
+    document.getElementById('fcTotal').textContent = currentData.vocab.length;
+    document.getElementById('fcKnown').textContent = flashcardKnown.size;
+    document.getElementById('fcUnknown').textContent = flashcardUnknown.size;
+    document.getElementById('flashcard').classList.remove('flipped');
+}
+
+function flipCard() {
+    document.getElementById('flashcard').classList.toggle('flipped');
+}
+
+function nextCard() {
+    currentCardIndex = (currentCardIndex + 1) % currentData.vocab.length;
+    renderFlashcard();
+}
+
+function prevCard() {
+    currentCardIndex = (currentCardIndex - 1 + currentData.vocab.length) % currentData.vocab.length;
+    renderFlashcard();
+}
+
+function markCard(known) {
+    const v = currentData.vocab[currentCardIndex];
+    if (known) {
+        flashcardKnown.add(v.target);
+        flashcardUnknown.delete(v.target);
+        showToast('✅ Đã đánh dấu thuộc: ' + v.target);
+    } else {
+        flashcardUnknown.add(v.target);
+        flashcardKnown.delete(v.target);
+        showToast('❌ Sẽ ôn lại: ' + v.target);
+    }
+    userProgress.flashcardsKnown = Math.max(userProgress.flashcardsKnown, flashcardKnown.size);
+    saveProgress();
+    updateProgressUI();
+    setTimeout(nextCard, 300);
+}
+
+function speakCurrent() {
+    speak(currentData.vocab[currentCardIndex].target);
+}
+
+// ============ SPEECH ============
+function speak(text) {
+    if ('speechSynthesis' in window) {
+        speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = currentData.speakLang;
+        utterance.rate = 0.8;
+        speechSynthesis.speak(utterance);
+    } else {
+        showToast('Trình duyệt không hỗ trợ phát âm');
+    }
+}
+
+// ============ QUIZ ============
+function startQuiz() {
+    const shuffled = [...currentData.vocab].sort(() => 0.5 - Math.random()).slice(0, Math.min(10, currentData.vocab.length));
+    quizQuestions = shuffled.map(q => {
+        const wrongAnswers = currentData.vocab.filter(v => v.target !== q.target)
+            .sort(() => 0.5 - Math.random()).slice(0, 3);
+        const options = [q, ...wrongAnswers].sort(() => 0.5 - Math.random());
+        return { question: q, options };
+    });
+    quizCurrent = 0;
+    quizScore = 0;
+    renderQuiz();
+}
+
+function renderQuiz() {
+    const box = document.getElementById('quizBox');
+    if (quizCurrent >= quizQuestions.length) {
+        const percent = Math.round((quizScore / quizQuestions.length) * 100);
+        if (percent > userProgress.bestQuiz) {
+            userProgress.bestQuiz = percent;
+            saveProgress();
+            updateProgressUI();
+        }
+        let message = '';
+        if (percent >= 90) message = '🏆 Xuất sắc! Bạn là cao thủ ngoại ngữ!';
+        else if (percent >= 70) message = '👍 Tốt lắm! Tiếp tục phát huy nhé!';
+        else if (percent >= 50) message = '😊 Khá ổn! Ôn lại thêm một chút nhé!';
+        else message = '💪 Cố lên! Hãy luyện flashcard thêm nhé!';
+        
+        box.innerHTML = `
+            <div class="quiz-result">
+                <div class="result-score">${quizScore}/${quizQuestions.length}</div>
+                <p style="font-size:1.1rem; margin:1rem 0; color:var(--gray);">${message}</p>
+                <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                    <button class="btn-primary" onclick="startQuiz()">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Làm lại</span>
+                    </button>
+                    <button class="btn-outline" onclick="showView('flashcard')">
+                        <i class="fa-solid fa-clone"></i> Ôn Flashcard
+                    </button>
+                </div>
+            </div>
+        `;
+        return;
+    }
+    
+    const q = quizQuestions[quizCurrent];
+    box.innerHTML = `
+        <div class="quiz-progress">
+            <span>Câu ${quizCurrent + 1} / ${quizQuestions.length}</span>
+            <span>Điểm: ${quizScore}</span>
+        </div>
+        <div class="quiz-question">
+            <span class="q-target ${currentData.fontClass}">${q.question.target}</span>
+            Nghĩa của từ này là gì?
+        </div>
+        <div class="quiz-options">
+            ${q.options.map(opt => `
+                <button class="quiz-option" onclick="answerQuiz('${opt.target.replace(/'/g, "\\'")}')">
+                    ${opt.meaning}
+                </button>
+            `).join('')}
+        </div>
+    `;
+}
+
+function answerQuiz(selectedTarget) {
+    const q = quizQuestions[quizCurrent];
+    const buttons = document.querySelectorAll('.quiz-option');
+    const isCorrect = selectedTarget === q.question.target;
+    
+    buttons.forEach(btn => {
+        btn.disabled = true;
+        const btnText = btn.textContent.trim();
+        const correctMeaning = q.question.meaning;
+        if (btnText === correctMeaning) btn.classList.add('correct');
+        else if (!isCorrect && btnText === q.options.find(o => o.target === selectedTarget)?.meaning) btn.classList.add('wrong');
+    });
+    
+    if (isCorrect) quizScore++;
+    
+    setTimeout(() => {
+        quizCurrent++;
+        renderQuiz();
+    }, 1200);
+}
+
+// ============ LISTENING (Feature 5) ============
+function initListening() {
+    listenCurrent = Math.floor(Math.random() * currentData.vocab.length);
+    document.getElementById('listenCurrent').textContent = 1;
+    document.getElementById('listenTotal').textContent = currentData.vocab.length;
+    document.getElementById('listenCorrectCount').textContent = listenCorrect;
+    document.getElementById('listenInput').value = '';
+    document.getElementById('listenInput').className = 'listen-input';
+    document.getElementById('listenFeedback').className = 'listen-feedback';
+    document.getElementById('listenHint').textContent = 'Nhấp vào nút bên dưới để nghe từ';
+}
+
+function playListenAudio() {
+    const v = currentData.vocab[listenCurrent];
+    speak(v.target);
+    document.getElementById('listenHint').textContent = 'Đang phát... Gõ lại từ bạn nghe được';
+}
+
+function checkListenAnswer() {
+    const input = document.getElementById('listenInput').value.trim();
+    const v = currentData.vocab[listenCurrent];
+    const feedback = document.getElementById('listenFeedback');
+    
+    if (!input) {
+        showToast('Vui lòng gõ từ bạn nghe được!');
+        return;
+    }
+    
+    // So sánh (không phân biệt hoa thường, bỏ dấu câu cuối)
+    const normalize = (s) => s.toLowerCase().replace(/[.!?,;:。！？，；：]/g, '').trim();
+    const isCorrect = normalize(input) === normalize(v.target);
+    
+    if (isCorrect) {
+        listenCorrect++;
+        userProgress.listeningCorrect = Math.max(userProgress.listeningCorrect, listenCorrect);
+        saveProgress();
+        updateProgressUI();
+        feedback.className = 'listen-feedback correct show';
+        feedback.innerHTML = `✅ Chính xác! <strong>${v.target}</strong> = ${v.meaning}`;
+        document.getElementById('listenInput').className = 'listen-input correct';
+        document.getElementById('listenCorrectCount').textContent = listenCorrect;
+        setTimeout(() => {
+            listenCurrent = Math.floor(Math.random() * currentData.vocab.length);
+            document.getElementById('listenInput').value = '';
+            document.getElementById('listenInput').className = 'listen-input';
+            feedback.className = 'listen-feedback';
+            document.getElementById('listenHint').textContent = 'Nghe từ tiếp theo';
+        }, 2000);
+    } else {
+        feedback.className = 'listen-feedback wrong show';
+        feedback.innerHTML = `❌ Chưa đúng. Đáp án: <strong>${v.target}</strong> (${v.pinyin})`;
+        document.getElementById('listenInput').className = 'listen-input wrong';
+    }
+}
+
+function skipListen() {
+    const v = currentData.vocab[listenCurrent];
+    showToast('Đáp án: ' + v.target);
+    setTimeout(() => {
+        listenCurrent = Math.floor(Math.random() * currentData.vocab.length);
+        document.getElementById('listenInput').value = '';
+        document.getElementById('listenInput').className = 'listen-input';
+        document.getElementById('listenFeedback').className = 'listen-feedback';
+        document.getElementById('listenHint').textContent = 'Nghe từ tiếp theo';
+    }, 1500);
+}
+
+// ============ MATCHING GAME (Feature 9) ============
+function startGame() {
+    // Reset
+    if (gameState.timer) clearInterval(gameState.timer);
+    gameState = { correct: 0, wrong: 0, time: 0, timer: null, selectedLeft: null, pairs: [] };
+    
+    // Chọn 6 từ ngẫu nhiên
+    const shuffled = [...currentData.vocab].sort(() => 0.5 - Math.random()).slice(0, 6);
+    gameState.pairs = shuffled;
+    
+    // Cột trái: từ
+    const leftItems = [...shuffled].sort(() => 0.5 - Math.random());
+    // Cột phải: nghĩa
+    const rightItems = [...shuffled].sort(() => 0.5 - Math.random());
+    
+    document.getElementById('matchLeft').innerHTML = leftItems.map(v => `
+        <div class="match-item ${currentData.fontClass}" data-target="${v.target.replace(/"/g, '&quot;')}" onclick="selectLeft(this)">${v.target}</div>
+    `).join('');
+    
+    document.getElementById('matchRight').innerHTML = rightItems.map(v => `
+        <div class="match-item" data-target="${v.target.replace(/"/g, '&quot;')}" onclick="selectRight(this)">${v.meaning}</div>
+    `).join('');
+    
+    document.getElementById('gameCorrect').textContent = '0';
+    document.getElementById('gameWrong').textContent = '0';
+    document.getElementById('gameTime').textContent = '0:00';
+    
+    // Timer
+    gameState.timer = setInterval(() => {
+        gameState.time++;
+        const min = Math.floor(gameState.time / 60);
+        const sec = gameState.time % 60;
+        document.getElementById('gameTime').textContent = `${min}:${sec.toString().padStart(2, '0')}`;
+    }, 1000);
+}
+
+function selectLeft(el) {
+    if (el.classList.contains('matched')) return;
+    document.querySelectorAll('#matchLeft .match-item').forEach(i => i.classList.remove('selected'));
+    el.classList.add('selected');
+    gameState.selectedLeft = el;
+}
+
+function selectRight(el) {
+    if (el.classList.contains('matched')) return;
+    if (!gameState.selectedLeft) {
+        showToast('Chọn từ bên trái trước!');
+        return;
+    }
+    
+    const leftTarget = gameState.selectedLeft.dataset.target;
+    const rightTarget = el.dataset.target;
+    
+    if (leftTarget === rightTarget) {
+        // Đúng
+        gameState.selectedLeft.classList.remove('selected');
+        gameState.selectedLeft.classList.add('matched');
+        el.classList.add('matched');
+        gameState.correct++;
+        document.getElementById('gameCorrect').textContent = gameState.correct;
+        gameState.selectedLeft = null;
+        
+        // Kiểm tra thắng
+        if (gameState.correct === gameState.pairs.length) {
+            clearInterval(gameState.timer);
+            if (gameState.correct > userProgress.bestGame) {
+                userProgress.bestGame = gameState.correct;
+                saveProgress();
+                updateProgressUI();
+            }
+            setTimeout(() => showToast(`🏆 Hoàn thành! Đúng ${gameState.correct}/${gameState.pairs.length} trong ${gameState.time}s`), 400);
+        }
+    } else {
+        // Sai
+        gameState.wrong++;
+        document.getElementById('gameWrong').textContent = gameState.wrong;
+        el.classList.add('wrong-shake');
+        gameState.selectedLeft.classList.add('wrong-shake');
+        setTimeout(() => {
+            el.classList.remove('wrong-shake');
+            if (gameState.selectedLeft) {
+                gameState.selectedLeft.classList.remove('wrong-shake', 'selected');
+            }
+            gameState.selectedLeft = null;
+        }, 500);
+    }
+}
+
+// ============ DICTIONARY ============
+function searchDict() {
+    const input = document.getElementById('dictInput');
+    const keyword = (input ? input.value : '').toLowerCase().trim();
+    const results = document.getElementById('dictResults');
+    
+    let filtered = currentData.vocab;
+    if (keyword) {
+        filtered = currentData.vocab.filter(v => 
+            v.target.toLowerCase().includes(keyword) ||
+            v.pinyin.toLowerCase().includes(keyword) ||
+            v.meaning.toLowerCase().includes(keyword)
+        );
+    }
+    
+    if (filtered.length === 0) {
+        results.innerHTML = `<div style="text-align:center; padding:3rem; color:var(--gray);">
+            <i class="fa-solid fa-magnifying-glass" style="font-size:2rem; margin-bottom:1rem; display:block;"></i>
+            Không tìm thấy từ nào phù hợp
+        </div>`;
+        return;
+    }
+    
+    results.innerHTML = filtered.map(v => `
+        <div class="dict-item">
+            <div>
+                <span class="di-target ${currentData.fontClass}">${v.target}</span>
+                <span class="di-pinyin" style="margin-left:1rem;">${v.pinyin}</span>
+            </div>
+            <div class="di-meaning">${v.meaning}</div>
+            <button class="audio-btn" onclick="speak('${v.target.replace(/'/g, "\\'")}')">
+                <i class="fa-solid fa-volume-high"></i>
+            </button>
+        </div>
+    `).join('');
+}
+
+// ============ BLOG (Feature 4) ============
+function renderBlog() {
+    document.getElementById('blogGrid').innerHTML = BLOG_POSTS.map(p => `
+        <div class="blog-card" onclick="showToast('📖 Đang mở: ${p.title}')">
+            <div class="blog-thumb ${currentData.fontClass}">${p.thumb}</div>
+            <div class="blog-body">
+                <span class="blog-tag">${p.tag}</span>
+                <h3>${p.title}</h3>
+                <p>${p.desc}</p>
+                <div class="blog-meta">
+                    <span><i class="fa-regular fa-clock"></i> ${p.time}</span>
+                    <span><i class="fa-regular fa-calendar"></i> ${p.date}</span>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// ============ COMMUNITY (Feature 10) ============
+function postComment() {
+    const name = document.getElementById('commentName').value.trim() || 'Ẩn danh';
+    const text = document.getElementById('commentText').value.trim();
+    
+    if (!text) {
+        showToast('Vui lòng nhập nội dung bình luận!');
+        return;
+    }
+    
+    comments.unshift({
+        id: Date.now(),
+        name: name,
+        text: text,
+        time: new Date().toLocaleString('vi-VN'),
+        likes: 0,
+        liked: false
+    });
+    
+    if (comments.length > 50) comments = comments.slice(0, 50);
+    
+    localStorage.setItem('nd_comments', JSON.stringify(comments));
+    userProgress.commentsPosted++;
+    saveProgress();
+    updateProgressUI();
+    
+    document.getElementById('commentText').value = '';
+    renderComments();
+    showToast('✅ Đã đăng bình luận!');
+}
+
+function renderComments() {
+    const list = document.getElementById('commentsList');
+    const count = document.getElementById('commentCount');
+    count.textContent = comments.length;
+    
+    if (comments.length === 0) {
+        list.innerHTML = `<div style="text-align:center; padding:2rem; color:var(--gray);">
+            <i class="fa-regular fa-comments" style="font-size:2rem; margin-bottom:0.5rem; display:block;"></i>
+            Chưa có bình luận nào. Hãy là người đầu tiên!
+        </div>`;
+        return;
+    }
+    
+    list.innerHTML = comments.map(c => `
+        <div class="comment-item">
+            <div class="comment-avatar">${c.name.charAt(0).toUpperCase()}</div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <span class="comment-name">${escapeHtml(c.name)}</span>
+                    <span class="comment-time">${c.time}</span>
+                </div>
+                <div class="comment-text">${escapeHtml(c.text)}</div>
+                <div class="comment-actions">
+                    <span class="comment-like ${c.liked ? 'liked' : ''}" onclick="likeComment(${c.id})">
+                        <i class="fa-${c.liked ? 'solid' : 'regular'} fa-heart"></i> ${c.likes}
+                    </span>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+function likeComment(id) {
+    const c = comments.find(x => x.id === id);
+    if (!c) return;
+    if (c.liked) { c.likes--; c.liked = false; }
+    else { c.likes++; c.liked = true; }
+    localStorage.setItem('nd_comments', JSON.stringify(comments));
+    renderComments();
+}
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+// ============ PWA (Feature 1) ============
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (!localStorage.getItem('nd_pwa_dismissed')) {
+        document.getElementById('pwaBanner').classList.add('show');
+    }
+});
+
+function installPWA() {
+    if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choice) => {
+            if (choice.outcome === 'accepted') showToast('✅ Đã cài đặt app!');
+            deferredPrompt = null;
+            document.getElementById('pwaBanner').classList.remove('show');
+        });
+    } else {
+        showToast('Mở menu trình duyệt → "Thêm vào màn hình chính"');
+    }
+}
+
+function hidePWABanner() {
+    document.getElementById('pwaBanner').classList.remove('show');
+    localStorage.setItem('nd_pwa_dismissed', 'true');
+}
+
+// ============ TOAST ============
+function showToast(msg) {
+    const toast = document.getElementById('toast');
+    document.getElementById('toastMsg').textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(window.__toastTimer);
+    window.__toastTimer = setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2200);
+}
+
+// ============ INIT ============
+document.addEventListener('DOMContentLoaded', () => {
+    // Dark mode
+    if (userProgress.darkMode) {
+        document.body.classList.add('dark-mode');
+        document.getElementById('darkModeBtn').innerHTML = '<i class="fa-solid fa-sun"></i>';
+    }
+    
+    updateStreak();
+    switchLanguage('cn');
+    renderBlog();
+    renderComments();
+    updateProgressUI();
+    
+    // Register service worker inline
+    if ('serviceWorker' in navigator) {
+        const swCode = `
+            self.addEventListener('install', e => self.skipWaiting());
+            self.addEventListener('activate', e => self.clients.claim());
+            self.addEventListener('fetch', e => {
+                e.respondWith(
+                    caches.match(e.request).then(r => r || fetch(e.request).catch(() => caches.match('/')))
+                );
+            });
+        `;
+        const blob = new Blob([swCode], { type: 'application/javascript' });
+        const swUrl = URL.createObjectURL(blob);
+        navigator.serviceWorker.register(swUrl).catch(() => {});
+    }
+});
+</script>
+
+</body>
+</html>
